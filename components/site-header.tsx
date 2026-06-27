@@ -1,17 +1,21 @@
-'use client'
+"use client"
 
-import Link from 'next/link'
-import { usePathname } from 'next/navigation'
-import { useState } from 'react'
-import { Menu, X } from 'lucide-react'
-import { cn } from '@/lib/utils'
-import { Button } from '@/components/ui/button'
-import { ShieldLogo } from '@/components/shield-logo'
+import Link from "next/link"
+import { usePathname } from "next/navigation"
+import { useState } from "react"
+import { Menu, X } from "lucide-react"
+import { cn } from "@/lib/utils"
+import { Button } from "@/components/ui/button"
+import { ShieldLogo } from "@/components/shield-logo"
 
 const navLinks = [
-  { href: '/platform', label: 'The Aegis Platform' },
-  { href: '/for-clinics', label: 'For Clinics' },
-  { href: '/investors', label: 'Investors' },
+  { href: "/our-solution", label: "Our Solution" },
+  { href: "/clinical-validation", label: "Clinical Validation" },
+  { href: "/security-compliance", label: "Security & Compliance" },
+  { href: "/platform", label: "The Aegis Platform" },
+  { href: "/for-clinics", label: "For Clinics" },
+  { href: "/investors", label: "Investors" },
+  { href: "/team", label: "Team" },
 ]
 
 export function SiteHeader() {
@@ -40,10 +44,10 @@ export function SiteHeader() {
                 key={link.href}
                 href={link.href}
                 className={cn(
-                  'rounded-md px-3 py-2 text-sm font-medium transition-colors',
+                  "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   active
-                    ? 'text-primary'
-                    : 'text-muted-foreground hover:text-foreground',
+                    ? "text-primary"
+                    : "text-muted-foreground hover:text-foreground"
                 )}
               >
                 {link.label}
@@ -62,7 +66,7 @@ export function SiteHeader() {
           type="button"
           className="inline-flex items-center justify-center rounded-md p-2 text-foreground md:hidden"
           onClick={() => setOpen((v) => !v)}
-          aria-label={open ? 'Close menu' : 'Open menu'}
+          aria-label={open ? "Close menu" : "Open menu"}
           aria-expanded={open}
         >
           {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
