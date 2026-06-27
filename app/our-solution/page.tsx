@@ -89,7 +89,7 @@ export default function OurSolutionPage() {
                 Clinical automation in real-time
               </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-                Aegis: Clinical Automation in Real-Time.
+                Aegis: Clinical Automation in Real-Time
               </h2>
             </Reveal>
             <div className="mt-10 grid gap-6 md:grid-cols-2">

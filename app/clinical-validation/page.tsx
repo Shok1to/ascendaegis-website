@@ -36,7 +36,7 @@ export default function ClinicalValidationPage() {
                 Clinical validation
               </p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Clinical Rigour Meets Automation.
+                Clinical Rigour Meets Automation
               </h1>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 Automated sleep scoring shouldn't require compromising on

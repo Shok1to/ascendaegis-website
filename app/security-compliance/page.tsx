@@ -53,7 +53,7 @@ export default function SecurityCompliancePage() {
                 Security & compliance
               </p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Trust, Security & Regulatory Governance.
+                Trust, Security & Regulatory Governance
               </h1>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 Ascend Aegis is built from the ground up to meet the stringent

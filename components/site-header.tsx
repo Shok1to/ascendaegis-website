@@ -16,6 +16,7 @@ const navLinks = [
   { href: "/for-clinics", label: "For Clinics" },
   { href: "/investors", label: "Investors" },
   { href: "/team", label: "Team" },
+  { href: "/regulatory-disclosures", label: "Regulatory Disclosures" },
 ]
 
 export function SiteHeader() {
