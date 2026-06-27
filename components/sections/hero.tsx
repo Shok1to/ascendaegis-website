@@ -1,18 +1,21 @@
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { ParallaxLayer, Reveal } from '@/components/parallax'
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { ParallaxLayer, Reveal } from "@/components/parallax"
 
 export function Hero() {
   return (
     <section className="relative overflow-hidden bg-primary text-primary-foreground">
-      <ParallaxLayer speed={-0.25} className="absolute inset-x-0 -inset-y-[20%]">
+      <ParallaxLayer
+        speed={-0.25}
+        className="absolute inset-x-0 -inset-y-[20%]"
+      >
         <div
           className="h-full w-full opacity-25"
           style={{
-            backgroundImage: 'url(/images/hero-abstract.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage: "url(/images/hero-abstract.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           aria-hidden="true"
         />
@@ -30,7 +33,7 @@ export function Hero() {
             </span>
           </p>
           <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            AI sleep scoring to automate clinical diagnostics at scale.
+            Turn days of manual sleep scoring into minutes.
           </h1>
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
             Regulatory-compliant AI for clinical automation. Starting with
