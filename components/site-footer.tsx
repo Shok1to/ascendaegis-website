@@ -7,14 +7,18 @@ const footerNav = [
     links: [
       { href: "/platform", label: "The Aegis Platform" },
       { href: "/platform#sleep-tool", label: "Aegis Sleep Tool" },
-      { href: "/platform#security", label: "Security & Compliance" },
+      { href: "/security-compliance", label: "Security & Compliance" },
+      { href: "/clinical-validation", label: "Clinical Validation" },
     ],
   },
   {
     heading: "Company",
     links: [
+      { href: "/our-solution", label: "Our Solution" },
       { href: "/for-clinics", label: "For Clinics" },
       { href: "/investors", label: "Investors" },
+      { href: "/team", label: "Team" },
+      { href: "/regulatory-disclosures", label: "Regulatory Disclosures" },
       { href: "/for-clinics#contact", label: "Contact" },
     ],
   },
