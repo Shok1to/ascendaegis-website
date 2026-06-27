@@ -1,21 +1,21 @@
-import Link from 'next/link'
-import { ShieldLogo } from '@/components/shield-logo'
+import Link from "next/link"
+import { ShieldLogo } from "@/components/shield-logo"
 
 const footerNav = [
   {
-    heading: 'Platform',
+    heading: "Platform",
     links: [
-      { href: '/platform', label: 'The Aegis Platform' },
-      { href: '/platform#sleep-tool', label: 'Aegis Sleep Tool' },
-      { href: '/platform#security', label: 'Security & Compliance' },
+      { href: "/platform", label: "The Aegis Platform" },
+      { href: "/platform#sleep-tool", label: "Aegis Sleep Tool" },
+      { href: "/platform#security", label: "Security & Compliance" },
     ],
   },
   {
-    heading: 'Company',
+    heading: "Company",
     links: [
-      { href: '/for-clinics', label: 'For Clinics' },
-      { href: '/investors', label: 'Investors' },
-      { href: '/for-clinics#contact', label: 'Contact' },
+      { href: "/for-clinics", label: "For Clinics" },
+      { href: "/investors", label: "Investors" },
+      { href: "/for-clinics#contact", label: "Contact" },
     ],
   },
 ]
@@ -67,7 +67,6 @@ export function SiteFooter() {
             Copyright &copy; {new Date().getFullYear()} Ascend Aegis
             Corporation. All rights reserved.
           </p>
-          <p>Powered by Nuvollo Cloud</p>
         </div>
       </div>
     </footer>
