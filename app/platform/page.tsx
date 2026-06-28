@@ -48,15 +48,21 @@ export default function PlatformPage() {
               backgroundPosition: "center",
             }}
           />
-          <div className="relative">
-            <PageHero
-              eyebrow="The Aegis Platform"
-              title="Clinical automation in real-time."
-              description="Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time."
-            />
-          </div>
-        </div>
-
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+                      <Reveal>
+                        <p className="eyebrow text-primary-foreground/70">
+                          The Aegis Platform
+                        </p>
+                        <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+                          Clinical automation in real-time.
+                        </h1>
+          <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                          Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time.
+                        </p>
+                      </Reveal>
+                    </div>
+                  </section>
+          
         {/* Capabilities — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
