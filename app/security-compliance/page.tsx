@@ -103,19 +103,6 @@ export default function SecurityCompliancePage() {
                 </Reveal>
               ))}
             </div>
-
-            {/* Nuvollo logo */}
-            <Reveal className="mt-12 flex items-center justify-center">
-              <div className="rounded-xl bg-primary px-12 py-8">
-                <Image
-                  src="/images/nuvollo.webp"
-                  alt="Nuvollo - ride the cloud"
-                  width={200}
-                  height={100}
-                  className="object-contain"
-                />
-              </div>
-            </Reveal>
           </div>
         </section>
 

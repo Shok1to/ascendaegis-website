@@ -84,7 +84,7 @@ export default function OurSolutionPage() {
           </div>
         </section>
 
-        {/* Clinical Automation — white with waveform image */}
+        {/* Clinical Automation — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
@@ -94,39 +94,40 @@ export default function OurSolutionPage() {
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Aegis: Clinical Automation in Real-Time
               </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Ascend Aegis replaces manual, error-prone diagnostic workflows
-                with high-precision AI. Our platform is engineered to handle
-                complex medical data in real-time, allowing clinicians to focus
-                on treatment rather than data entry.
-              </p>
             </Reveal>
-
-            <Reveal className="mt-10">
-              <Image
-                src="/images/sleep-waveform.png"
-                alt="Polysomnography sleep study waveforms"
-                width={1200}
-                height={600}
-                className="w-full rounded-xl border border-border shadow-sm"
-              />
-            </Reveal>
-
-            <div className="mt-10 grid gap-6 md:grid-cols-2">
-              {tools.map((tool, i) => (
-                <Reveal
-                  key={tool.title}
-                  delay={i * 120}
-                  className="rounded-xl border border-border bg-card p-7 shadow-sm"
-                >
-                  <h3 className="text-lg font-semibold text-foreground">
-                    {tool.title}
-                  </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                    {tool.body}
-                  </p>
-                </Reveal>
-              ))}
+            <div className="mt-8 grid items-start gap-12 lg:grid-cols-2">
+              <Reveal>
+                <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
+                  Ascend Aegis replaces manual, error-prone diagnostic workflows
+                  with high-precision AI. Our platform is engineered to handle
+                  complex medical data in real-time, allowing clinicians to
+                  focus on treatment rather than data entry.
+                </p>
+                <div className="mt-8 grid gap-6">
+                  {tools.map((tool, i) => (
+                    <div
+                      key={tool.title}
+                      className="rounded-xl border border-border bg-card p-6 shadow-sm"
+                    >
+                      <h3 className="text-base font-semibold text-foreground">
+                        {tool.title}
+                      </h3>
+                      <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
+                        {tool.body}
+                      </p>
+                    </div>
+                  ))}
+                </div>
+              </Reveal>
+              <Reveal>
+                <Image
+                  src="/images/sleep-waveform.png"
+                  alt="Polysomnography sleep study waveforms"
+                  width={600}
+                  height={500}
+                  className="w-full rounded-xl border border-border shadow-sm"
+                />
+              </Reveal>
             </div>
           </div>
         </section>
