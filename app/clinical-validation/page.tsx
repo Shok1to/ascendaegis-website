@@ -91,36 +91,38 @@ export default function ClinicalValidationPage() {
         {/* Signal Analysis — navy with image */}
         <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <Reveal className="max-w-2xl">
-              <p className="eyebrow text-primary-foreground/70">
-                High-fidelity signal analysis
-              </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                Multi-Channel Physiological Intelligence
-              </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
-                Our models interpret raw, multi-channel physiological signals,
-                directly analyzing EEG, ECG, EOG, and EMG channels
-                simultaneously. By training on diverse clinical-grade datasets,
-                the platform successfully maps complex sleep architecture,
-                capturing rapid transitions and micro-arousals that traditional
-                rule-based algorithms frequently miss.
-              </p>
-              <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
-                This ensures that your clinical staff receives a baseline draft
-                that aligns seamlessly with gold-standard laboratory scoring
-                rules.
-              </p>
-            </Reveal>
-            <Reveal className="mt-12">
-              <Image
-                src="/images/ai-vs-manual.png"
-                alt="AI vs Manual Sleep Scoring Comparison"
-                width={1200}
-                height={600}
-                className="w-full rounded-xl shadow-lg"
-              />
-            </Reveal>
+            <div className="grid items-center gap-12 lg:grid-cols-2">
+              <Reveal>
+                <p className="eyebrow text-primary-foreground/70">
+                  High-fidelity signal analysis
+                </p>
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+                  Multi-Channel Physiological Intelligence
+                </h2>
+                <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                  Our models interpret raw, multi-channel physiological signals,
+                  directly analyzing EEG, ECG, EOG, and EMG channels
+                  simultaneously. By training on diverse clinical-grade
+                  datasets, the platform successfully maps complex sleep
+                  architecture, capturing rapid transitions and micro-arousals
+                  that traditional rule-based algorithms frequently miss.
+                </p>
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                  This ensures that your clinical staff receives a baseline
+                  draft that aligns seamlessly with gold-standard laboratory
+                  scoring rules.
+                </p>
+              </Reveal>
+              <Reveal>
+                <Image
+                  src="/images/ai-vs-manual.png"
+                  alt="AI vs Manual Sleep Scoring Comparison"
+                  width={600}
+                  height={400}
+                  className="w-full rounded-xl shadow-lg"
+                />
+              </Reveal>
+            </div>
           </div>
         </section>
 
