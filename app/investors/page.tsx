@@ -109,8 +109,8 @@ export default function InvestorsPage() {
           </div>
         </section>
 
-        {/* Roadmap — navy */}
-        <section className="border-b border-primary-foreground/10 bg-primary text-primary-foreground">
+        {/* Roadmap — navy with white cards */}
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <Reveal className="max-w-2xl">
               <p className="eyebrow text-primary-foreground/70">The roadmap</p>
@@ -121,14 +121,14 @@ export default function InvestorsPage() {
             <ol className="mt-12 grid gap-6 md:grid-cols-3">
               {roadmap.map((item, i) => (
                 <Reveal key={item.step} delay={i * 120}>
-                  <li className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7">
-                    <span className="font-mono text-sm font-semibold text-accent-foreground/90">
+                  <li className="rounded-xl bg-background p-7 shadow-sm h-full">
+                    <span className="font-mono text-sm font-semibold text-accent">
                       {item.step}
                     </span>
-                    <h3 className="mt-3 text-lg font-semibold text-primary-foreground">
+                    <h3 className="mt-3 text-lg font-semibold text-foreground">
                       {item.title}
                     </h3>
-                    <p className="mt-2 text-sm leading-relaxed text-primary-foreground/75">
+                    <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
                       {item.desc}
                     </p>
                   </li>
@@ -138,25 +138,21 @@ export default function InvestorsPage() {
           </div>
         </section>
 
-        {/* CTA — navy (already was navy, keep) */}
-        <section className="bg-primary text-primary-foreground">
+        {/* CTA — white */}
+        <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <Reveal className="flex flex-col items-start gap-6 sm:flex-row sm:items-center sm:justify-between">
               <div className="max-w-2xl">
-                <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+                <h2 className="text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                   Request the investor brief.
                 </h2>
-                <p className="mt-4 text-pretty leading-relaxed text-primary-foreground/85">
+                <p className="mt-4 text-pretty leading-relaxed text-muted-foreground">
                   Connect with our team to learn more about the market, the
                   technology, and the path to a new global standard for
                   diagnostics.
                 </p>
               </div>
-              <Button
-                size="lg"
-                className="bg-background text-foreground hover:bg-background/90"
-                render={<Link href="/for-clinics#contact" />}
-              >
+              <Button size="lg" render={<Link href="/for-clinics#contact" />}>
                 Get in touch
                 <ArrowRight className="h-4 w-4" />
               </Button>
