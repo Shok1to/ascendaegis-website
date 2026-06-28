@@ -3,16 +3,19 @@
 import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
-import { Menu, X } from "lucide-react"
+import { Menu, X, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ShieldLogo } from "@/components/shield-logo"
 
-const navLinks = [
+const primaryLinks = [
   { href: "/our-solution", label: "Our Solution" },
   { href: "/clinical-validation", label: "Clinical Validation" },
   { href: "/security-compliance", label: "Security & Compliance" },
   { href: "/platform", label: "The Aegis Platform" },
+]
+
+const moreLinks = [
   { href: "/for-clinics", label: "For Clinics" },
   { href: "/investors", label: "Investors" },
   { href: "/team", label: "Team" },
@@ -22,6 +25,7 @@ const navLinks = [
 export function SiteHeader() {
   const pathname = usePathname()
   const [open, setOpen] = useState(false)
+  const [moreOpen, setMoreOpen] = useState(false)
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
@@ -38,7 +42,7 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
-          {navLinks.map((link) => {
+          {primaryLinks.map((link) => {
             const active = pathname === link.href
             return (
               <Link
@@ -55,6 +59,36 @@ export function SiteHeader() {
               </Link>
             )
           })}
+
+          {/* More dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setMoreOpen((v) => !v)}
+              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
+            >
+              More
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  moreOpen && "rotate-180"
+                )}
+              />
+            </button>
+            {moreOpen && (
+              <div className="absolute right-0 top-full mt-1 w-52 rounded-xl border border-border bg-background shadow-lg">
+                {moreLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setMoreOpen(false)}
+                    className="block px-4 py-2.5 text-sm text-foreground/80 hover:bg-secondary hover:text-foreground first:rounded-t-xl last:rounded-b-xl"
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -74,10 +108,11 @@ export function SiteHeader() {
         </button>
       </div>
 
+      {/* Mobile menu */}
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
-            {navLinks.map((link) => (
+            {[...primaryLinks, ...moreLinks].map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
