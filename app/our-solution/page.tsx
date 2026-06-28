@@ -40,7 +40,7 @@ export default function OurSolutionPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero + Pillars — all navy */}
+        {/* Hero + Pillars — navy */}
         <section className="bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
@@ -59,15 +59,15 @@ export default function OurSolutionPage() {
                 <Reveal
                   key={pillar.title}
                   delay={i * 120}
-                  className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7"
+                  className="rounded-xl bg-background p-7 shadow-sm"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary-foreground/20 text-primary-foreground">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <pillar.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-primary-foreground">
+                  <h3 className="mt-5 text-lg font-semibold text-foreground">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {pillar.body}
                   </p>
                 </Reveal>
