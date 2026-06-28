@@ -2,7 +2,7 @@ import type { Metadata } from "next"
 import { Clock, CheckCircle2, Plug, HeartPulse } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { PageHero } from "@/components/page-hero"
+import { Reveal } from "@/components/parallax"
 import { ContactForm } from "@/components/contact-form"
 
 export const metadata: Metadata = {
@@ -39,12 +39,32 @@ export default function ForClinicsPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <PageHero
-          eyebrow="For Clinics"
-          title="Zero-friction diagnostics for your clinic."
-          description="We provide the infrastructure for diagnostic automation, eliminating manual bottlenecks so your providers can focus on patient care."
-        />
+        {/* Hero — navy with hex background */}
+        <section className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+            <Reveal>
+              <p className="eyebrow text-primary-foreground/70">For Clinics</p>
+              <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+                Zero-friction diagnostics for your clinic.
+              </h1>
+              <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                We provide the infrastructure for diagnostic automation,
+                eliminating manual bottlenecks so your providers can focus on
+                patient care.
+              </p>
+            </Reveal>
+          </div>
+        </section>
 
+        {/* Benefits — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2">
@@ -65,20 +85,26 @@ export default function ForClinicsPage() {
           </div>
         </section>
 
-        <section id="contact" className="bg-secondary/50 scroll-mt-16">
+        {/* Contact — navy */}
+        <section
+          id="contact"
+          className="bg-primary text-primary-foreground scroll-mt-16"
+        >
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <div className="grid gap-12 lg:grid-cols-2">
-              <div>
-                <p className="eyebrow text-accent">Request a demo</p>
-                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <Reveal>
+                <p className="eyebrow text-primary-foreground/70">
+                  Request a demo
+                </p>
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                   See Aegis run a study in real-time
                 </h2>
-                <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
+                <p className="mt-5 text-pretty leading-relaxed text-primary-foreground/85">
                   Tell us about your clinic and current workflow. Our clinical
                   team will walk you through how Aegis automates scoring and
                   integrates with your existing systems.
                 </p>
-              </div>
+              </Reveal>
               <ContactForm />
             </div>
           </div>
