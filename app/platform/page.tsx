@@ -38,12 +38,24 @@ export default function PlatformPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero */}
-        <PageHero
-          eyebrow="The Aegis Platform"
-          title="Clinical automation in real-time."
-          description="Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time."
-        />
+        {/* Hero — navy with hex background */}
+        <div className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative">
+            <PageHero
+              eyebrow="The Aegis Platform"
+              title="Clinical automation in real-time."
+              description="Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time."
+            />
+          </div>
+        </div>
 
         {/* Capabilities — white */}
         <section className="border-b border-border bg-background">
