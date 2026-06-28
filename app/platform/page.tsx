@@ -38,24 +38,12 @@ export default function PlatformPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero — navy with hex background */}
-        <div className="relative bg-primary text-primary-foreground">
-          <div
-            className="absolute inset-0 opacity-40"
-            style={{
-              backgroundImage: "url(/images/hero-bg.png)",
-              backgroundSize: "cover",
-              backgroundPosition: "center",
-            }}
-          />
-          <div className="relative">
-            <PageHero
-              eyebrow="The Aegis Platform"
-              title="Clinical automation in real-time."
-              description="Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time."
-            />
-          </div>
-        </div>
+        {/* Hero */}
+        <PageHero
+          eyebrow="The Aegis Platform"
+          title="Clinical automation in real-time."
+          description="Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time."
+        />
 
         {/* Capabilities — white */}
         <section className="border-b border-border bg-background">
@@ -110,7 +98,6 @@ export default function PlatformPage() {
                 />
               </div>
             </div>
-
             <div className="mt-14">
               <WorkflowDiagram />
             </div>
@@ -134,7 +121,6 @@ export default function PlatformPage() {
             <div className="mt-12">
               <ComplianceGrid />
             </div>
-
             <div className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-border bg-card p-8 sm:flex-row sm:items-center sm:justify-between">
               <p className="text-pretty text-lg font-medium text-foreground">
                 See the Aegis platform applied to your clinic&apos;s workflow.
