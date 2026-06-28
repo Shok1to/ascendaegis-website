@@ -11,7 +11,7 @@ export function Hero() {
         className="absolute inset-x-0 -inset-y-[20%]"
       >
         <div
-          className="h-full w-full opacity-25"
+          className="h-full w-full opacity-45"
           style={{
             backgroundImage: "url(/images/hero-bg.png)",
             backgroundSize: "cover",
@@ -21,7 +21,7 @@ export function Hero() {
         />
       </ParallaxLayer>
       <div
-        className="absolute inset-0 bg-gradient-to-t from-primary via-primary/85 to-primary/60"
+        className="absolute inset-0 bg-gradient-to-t from-primary/90 via-primary/50 to-primary/20"
         aria-hidden="true"
       />
 
