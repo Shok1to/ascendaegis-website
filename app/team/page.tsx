@@ -30,25 +30,25 @@ const board = [
     name: "Mr. Joey Bermudez",
     title: "Chairman of the Board",
     image: "/images/Joey.webp",
-    bioUrl: "https://ascendaegis.com/joey-bermudez",
+    bioUrl: "/joey-bermudez",
   },
   {
     name: "Dr. Timothy Damaso",
     title: "Board Member · Physiomed",
     image: "/images/Timothy.webp",
-    bioUrl: "https://ascendaegis.com/dr-timothy-damaso",
+    bioUrl: "/dr-timothy-damaso",
   },
   {
     name: "Mr. Alberto Turri",
     title: "Board Member · FNS LLC",
     image: "/images/Alberto.webp",
-    bioUrl: "https://ascendaegis.com/alberto-turri",
+    bioUrl: "/alberto-turri",
   },
   {
     name: "Mr. Richard Bangyay",
     title: "Board Member",
     image: "/images/Richard.webp",
-    bioUrl: "https://ascendaegis.com/richard-bangyay",
+    bioUrl: "/richard-bangyay",
   },
 ]
 
@@ -154,8 +154,6 @@ export default function TeamPage() {
                     </p>
                     <Link
                       href={member.bioUrl}
-                      target="_blank"
-                      rel="noopener noreferrer"
                       className="mt-4 inline-flex items-center rounded-md bg-primary-foreground/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary-foreground ring-1 ring-inset ring-primary-foreground/20 transition hover:bg-primary-foreground/20"
                     >
                       Professional Biography
