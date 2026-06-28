@@ -1,4 +1,4 @@
-import { ParallaxLayer, Reveal } from '@/components/parallax'
+import { ParallaxLayer, Reveal } from "@/components/parallax"
 
 export function PageHero({
   eyebrow,
@@ -11,13 +11,16 @@ export function PageHero({
 }) {
   return (
     <section className="relative overflow-hidden border-b border-border bg-primary text-primary-foreground">
-      <ParallaxLayer speed={-0.25} className="absolute inset-x-0 -inset-y-[25%]">
+      <ParallaxLayer
+        speed={-0.25}
+        className="absolute inset-x-0 -inset-y-[25%]"
+      >
         <div
           className="h-full w-full opacity-20"
           style={{
-            backgroundImage: 'url(/images/hero-abstract.png)',
-            backgroundSize: 'cover',
-            backgroundPosition: 'center',
+            backgroundImage: "url(/images/hero-bg.png)",
+            backgroundSize: "cover",
+            backgroundPosition: "center",
           }}
           aria-hidden="true"
         />
