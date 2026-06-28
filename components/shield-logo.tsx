@@ -6,9 +6,9 @@ export function ShieldLogo({ className }: { className?: string }) {
     <Image
       src="/images/logo.webp"
       alt="Ascend Aegis"
-      width={32}
-      height={32}
-      className={cn("h-8 w-8 object-contain", className)}
+      width={40}
+      height={40}
+      className={cn("h-10 w-10 object-contain", className)}
     />
   )
 }
