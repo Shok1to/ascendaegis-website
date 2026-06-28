@@ -1,3 +1,4 @@
+import Image from "next/image"
 import { Shield, Lock, FileCheck } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -45,15 +46,23 @@ export default function SecurityCompliancePage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        {/* Hero — navy with hex background */}
+        <section className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
               <p className="eyebrow text-primary-foreground/70">
                 Security & compliance
               </p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Trust, Security & Regulatory Governance
+                Trust, Security & Regulatory Governance.
               </h1>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 Ascend Aegis is built from the ground up to meet the stringent
@@ -64,7 +73,7 @@ export default function SecurityCompliancePage() {
           </div>
         </section>
 
-        {/* Pillars */}
+        {/* Pillars — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
@@ -80,7 +89,7 @@ export default function SecurityCompliancePage() {
                 <Reveal
                   key={pillar.title}
                   delay={i * 120}
-                  className="rounded-xl border border-border bg-card p-7"
+                  className="rounded-xl border border-border bg-card p-7 shadow-sm"
                 >
                   <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <pillar.icon className="h-5 w-5" />
@@ -94,28 +103,43 @@ export default function SecurityCompliancePage() {
                 </Reveal>
               ))}
             </div>
+
+            {/* Nuvollo logo */}
+            <Reveal className="mt-12 flex items-center justify-center">
+              <div className="rounded-xl bg-primary px-12 py-8">
+                <Image
+                  src="/images/nuvollo.webp"
+                  alt="Nuvollo - ride the cloud"
+                  width={200}
+                  height={100}
+                  className="object-contain"
+                />
+              </div>
+            </Reveal>
           </div>
         </section>
 
-        {/* Roadmap */}
-        <section className="border-b border-border bg-secondary/50">
+        {/* Roadmap — navy */}
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <p className="eyebrow text-accent">Regulatory roadmap</p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <p className="eyebrow text-primary-foreground/70">
+                Regulatory roadmap
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 The Aegis Regulatory Roadmap
               </h2>
             </Reveal>
             <div className="mt-12 space-y-6">
               {roadmap.map((item, i) => (
                 <Reveal key={item.title} delay={i * 120}>
-                  <div className="flex gap-6 rounded-xl border border-border bg-card p-7">
+                  <div className="flex gap-6 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7">
                     <span className="font-mono text-sm font-semibold text-accent shrink-0 mt-1">
                       {item.step}
                     </span>
                     <div className="flex-1">
                       <div className="flex items-center gap-3 flex-wrap">
-                        <h3 className="text-lg font-semibold text-foreground">
+                        <h3 className="text-lg font-semibold text-primary-foreground">
                           {item.title}
                         </h3>
                         <span
@@ -124,7 +148,7 @@ export default function SecurityCompliancePage() {
                           {item.status}
                         </span>
                       </div>
-                      <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                      <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
                         {item.body}
                       </p>
                     </div>
@@ -135,11 +159,11 @@ export default function SecurityCompliancePage() {
           </div>
         </section>
 
-        {/* Notice */}
+        {/* Notice — white */}
         <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <div className="rounded-xl border border-border bg-card p-8">
+              <div className="rounded-xl border border-border bg-card p-8 shadow-sm">
                 <div className="flex gap-4">
                   <FileCheck className="h-6 w-6 text-accent shrink-0 mt-1" />
                   <div>
