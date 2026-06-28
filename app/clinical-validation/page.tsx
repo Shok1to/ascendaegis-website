@@ -91,15 +91,17 @@ export default function ClinicalValidationPage() {
         {/* Signal Analysis — navy with image */}
         <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <div className="grid items-center gap-12 lg:grid-cols-2">
+            <Reveal>
+              <p className="eyebrow text-primary-foreground/70">
+                High-fidelity signal analysis
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+                Multi-Channel Physiological Intelligence
+              </h2>
+            </Reveal>
+            <div className="mt-8 grid items-start gap-12 lg:grid-cols-2">
               <Reveal>
-                <p className="eyebrow text-primary-foreground/70">
-                  High-fidelity signal analysis
-                </p>
-                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-                  Multi-Channel Physiological Intelligence
-                </h2>
-                <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                <p className="text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   Our models interpret raw, multi-channel physiological signals,
                   directly analyzing EEG, ECG, EOG, and EMG channels
                   simultaneously. By training on diverse clinical-grade
@@ -112,13 +114,29 @@ export default function ClinicalValidationPage() {
                   draft that aligns seamlessly with gold-standard laboratory
                   scoring rules.
                 </p>
+                <ul className="mt-6 space-y-2">
+                  {[
+                    "EEG — Sleep stage classification (N1, N2, N3, REM)",
+                    "EOG — Rapid eye movement detection",
+                    "EMG — Muscle tone and arousal tracking",
+                    "ECG — Cardiac rhythm and apnea correlation",
+                  ].map((item) => (
+                    <li
+                      key={item}
+                      className="flex items-start gap-2 text-sm text-primary-foreground/80"
+                    >
+                      <span className="mt-1.5 h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                      {item}
+                    </li>
+                  ))}
+                </ul>
               </Reveal>
               <Reveal>
                 <Image
                   src="/images/ai-vs-manual.png"
                   alt="AI vs Manual Sleep Scoring Comparison"
-                  width={600}
-                  height={400}
+                  width={800}
+                  height={600}
                   className="w-full rounded-xl shadow-lg"
                 />
               </Reveal>
