@@ -1,4 +1,3 @@
-import Image from "next/image"
 import { Shield, Lock, FileCheck } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -103,7 +102,8 @@ export default function SecurityCompliancePage() {
                 </Reveal>
               ))}
             </div>
-
+          </div>
+        </section>
 
         {/* Roadmap — navy */}
         <section className="border-b border-border bg-primary text-primary-foreground">
