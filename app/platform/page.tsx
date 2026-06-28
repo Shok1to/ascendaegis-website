@@ -4,7 +4,7 @@ import Link from "next/link"
 import { ArrowRight, Gauge, ShieldCheck, Workflow } from "lucide-react"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
-import { PageHero } from "@/components/page-hero"
+import { Reveal } from "@/components/parallax"
 import { WorkflowDiagram } from "@/components/diagrams/workflow-diagram"
 import { ComplianceGrid } from "@/components/diagrams/compliance-grid"
 import { Button } from "@/components/ui/button"
@@ -39,7 +39,7 @@ export default function PlatformPage() {
       <SiteHeader />
       <main className="flex-1">
         {/* Hero — navy with hex background */}
-        <div className="relative bg-primary text-primary-foreground">
+        <section className="relative bg-primary text-primary-foreground">
           <div
             className="absolute inset-0 opacity-40"
             style={{
@@ -49,20 +49,22 @@ export default function PlatformPage() {
             }}
           />
           <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-                      <Reveal>
-                        <p className="eyebrow text-primary-foreground/70">
-                          The Aegis Platform
-                        </p>
-                        <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                          Clinical automation in real-time.
-                        </h1>
-          <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
-                          Ascend Aegis replaces manual, error-prone diagnostic workflows with high-precision AI engineered to handle complex medical data in real-time.
-                        </p>
-                      </Reveal>
-                    </div>
-                  </section>
-          
+            <Reveal>
+              <p className="eyebrow text-primary-foreground/70">
+                The Aegis Platform
+              </p>
+              <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
+                Clinical automation in real-time.
+              </h1>
+              <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                Ascend Aegis replaces manual, error-prone diagnostic workflows
+                with high-precision AI engineered to handle complex medical data
+                in real-time.
+              </p>
+            </Reveal>
+          </div>
+        </section>
+
         {/* Capabilities — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
