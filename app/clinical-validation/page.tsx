@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
@@ -28,15 +29,23 @@ export default function ClinicalValidationPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero */}
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        {/* Hero — navy with hex background */}
+        <section className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
               <p className="eyebrow text-primary-foreground/70">
                 Clinical validation
               </p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
-                Clinical Rigour Meets Automation
+                Clinical Rigour Meets Automation.
               </h1>
               <p className="mt-5 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 Automated sleep scoring shouldn't require compromising on
@@ -48,7 +57,7 @@ export default function ClinicalValidationPage() {
           </div>
         </section>
 
-        {/* Metrics */}
+        {/* Metrics — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
@@ -62,7 +71,7 @@ export default function ClinicalValidationPage() {
                 <Reveal
                   key={metric.label}
                   delay={i * 120}
-                  className="rounded-xl border border-border bg-card p-8 text-center"
+                  className="rounded-xl border border-border bg-card p-8 text-center shadow-sm"
                 >
                   <p className="text-5xl font-bold text-primary">
                     {metric.value}
@@ -79,17 +88,17 @@ export default function ClinicalValidationPage() {
           </div>
         </section>
 
-        {/* Signal Analysis */}
-        <section className="border-b border-border bg-secondary/50">
+        {/* Signal Analysis — navy with image */}
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
-              <p className="eyebrow text-accent">
+              <p className="eyebrow text-primary-foreground/70">
                 High-fidelity signal analysis
               </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 Multi-Channel Physiological Intelligence
               </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 Our models interpret raw, multi-channel physiological signals,
                 directly analyzing EEG, ECG, EOG, and EMG channels
                 simultaneously. By training on diverse clinical-grade datasets,
@@ -97,16 +106,25 @@ export default function ClinicalValidationPage() {
                 capturing rapid transitions and micro-arousals that traditional
                 rule-based algorithms frequently miss.
               </p>
-              <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+              <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                 This ensures that your clinical staff receives a baseline draft
                 that aligns seamlessly with gold-standard laboratory scoring
                 rules.
               </p>
             </Reveal>
+            <Reveal className="mt-12">
+              <Image
+                src="/images/ai-vs-manual.png"
+                alt="AI vs Manual Sleep Scoring Comparison"
+                width={1200}
+                height={600}
+                className="w-full rounded-xl shadow-lg"
+              />
+            </Reveal>
           </div>
         </section>
 
-        {/* CTA */}
+        {/* CTA — white */}
         <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
