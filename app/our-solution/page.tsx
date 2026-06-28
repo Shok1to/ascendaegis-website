@@ -1,4 +1,5 @@
 import Link from "next/link"
+import Image from "next/image"
 import { ArrowRight, Stethoscope, Zap, Globe2, Shield, Cpu } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
@@ -91,6 +92,12 @@ export default function OurSolutionPage() {
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Aegis: Clinical Automation in Real-Time
               </h2>
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
+                Ascend Aegis replaces manual, error-prone diagnostic workflows
+                with high-precision AI. Our platform is engineered to handle
+                complex medical data in real-time, allowing clinicians to focus
+                on treatment rather than data entry.
+              </p>
             </Reveal>
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {tools.map((tool, i) => (
@@ -112,26 +119,41 @@ export default function OurSolutionPage() {
         </section>
 
         {/* Security */}
-        <section className="border-b border-border bg-background">
+        <section className="border-b border-border bg-secondary/50">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <Reveal className="max-w-2xl">
+            <Reveal>
               <p className="eyebrow text-accent">Infrastructure & security</p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Unlimited Scale. Uncompromising Security.
               </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-                Powered by the Aegis × Nuvollo Strategic Partnership. By
-                integrating Nuvollo's enterprise-grade cloud capabilities, we
-                have removed the infrastructure bottleneck. This means SOC 2
-                Type II security, real-time scaling, and low-latency global
-                reach for every diagnostic we run.
-              </p>
-              <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
-                By leveraging Nuvollo's infrastructure, Ascend Aegis maintains a
-                Capital-Light model, allowing us to scale diagnostic volume
-                globally with zero CAPEX investment in hardware.
-              </p>
             </Reveal>
+            <div className="mt-10 grid items-center gap-12 lg:grid-cols-2">
+              <Reveal>
+                <p className="text-base font-semibold text-foreground">
+                  Powered by the Aegis × Nuvollo Strategic Partnership.
+                </p>
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                  By integrating Nuvollo's enterprise-grade cloud capabilities,
+                  we have removed the infrastructure bottleneck. This means SOC
+                  2 Type II security, real-time scaling, and low-latency global
+                  reach for every diagnostic we run.
+                </p>
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                  By leveraging Nuvollo's infrastructure, Ascend Aegis maintains
+                  a Capital-Light model, allowing us to scale diagnostic volume
+                  globally with zero CAPEX investment in hardware.
+                </p>
+              </Reveal>
+              <Reveal className="flex items-center justify-center">
+                <Image
+                  src="/images/nuvollo.webp"
+                  alt="Nuvollo - ride the cloud"
+                  width={400}
+                  height={200}
+                  className="object-contain"
+                />
+              </Reveal>
+            </div>
           </div>
         </section>
 
