@@ -40,9 +40,17 @@ export default function OurSolutionPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero + Pillars — navy */}
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        {/* Hero + Pillars — navy with hex background */}
+        <section className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
               <p className="eyebrow text-primary-foreground/70">Our solution</p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -76,7 +84,7 @@ export default function OurSolutionPage() {
           </div>
         </section>
 
-        {/* Clinical Automation — white */}
+        {/* Clinical Automation — white with waveform image */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
@@ -93,6 +101,17 @@ export default function OurSolutionPage() {
                 on treatment rather than data entry.
               </p>
             </Reveal>
+
+            <Reveal className="mt-10">
+              <Image
+                src="/images/sleep-waveform.png"
+                alt="Polysomnography sleep study waveforms"
+                width={1200}
+                height={600}
+                className="w-full rounded-xl border border-border shadow-sm"
+              />
+            </Reveal>
+
             <div className="mt-10 grid gap-6 md:grid-cols-2">
               {tools.map((tool, i) => (
                 <Reveal
