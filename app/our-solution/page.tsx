@@ -1,6 +1,6 @@
 import Link from "next/link"
 import Image from "next/image"
-import { ArrowRight, Stethoscope, Zap, Globe2, Shield, Cpu } from "lucide-react"
+import { ArrowRight, Stethoscope, Zap, Globe2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
@@ -104,7 +104,7 @@ export default function OurSolutionPage() {
                 <Reveal
                   key={tool.title}
                   delay={i * 120}
-                  className="rounded-xl border border-border bg-card p-7"
+                  className="rounded-xl border border-border bg-card p-7 shadow-sm"
                 >
                   <h3 className="text-lg font-semibold text-foreground">
                     {tool.title}
@@ -119,26 +119,28 @@ export default function OurSolutionPage() {
         </section>
 
         {/* Security */}
-        <section className="border-b border-border bg-secondary/50">
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <p className="eyebrow text-accent">Infrastructure & security</p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <p className="eyebrow text-primary-foreground/70">
+                Infrastructure & security
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 Unlimited Scale. Uncompromising Security.
               </h2>
             </Reveal>
             <div className="mt-10 grid items-center gap-12 lg:grid-cols-2">
               <Reveal>
-                <p className="text-base font-semibold text-foreground">
+                <p className="text-base font-semibold">
                   Powered by the Aegis × Nuvollo Strategic Partnership.
                 </p>
-                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   By integrating Nuvollo's enterprise-grade cloud capabilities,
                   we have removed the infrastructure bottleneck. This means SOC
                   2 Type II security, real-time scaling, and low-latency global
                   reach for every diagnostic we run.
                 </p>
-                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   By leveraging Nuvollo's infrastructure, Ascend Aegis maintains
                   a Capital-Light model, allowing us to scale diagnostic volume
                   globally with zero CAPEX investment in hardware.
