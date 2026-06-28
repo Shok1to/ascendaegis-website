@@ -40,7 +40,7 @@ export default function OurSolutionPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        {/* Hero — navy */}
+        {/* Hero + Pillars — all navy */}
         <section className="bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
@@ -54,26 +54,20 @@ export default function OurSolutionPage() {
                 complex medical data in real-time.
               </p>
             </Reveal>
-          </div>
-        </section>
-
-        {/* Pillars — white */}
-        <section className="border-b border-border bg-background">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
+            <div className="mt-14 grid gap-6 md:grid-cols-3">
               {pillars.map((pillar, i) => (
                 <Reveal
                   key={pillar.title}
                   delay={i * 120}
-                  className="bg-card p-7"
+                  className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7"
                 >
-                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary-foreground/20 text-primary-foreground">
                     <pillar.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-foreground">
+                  <h3 className="mt-5 text-lg font-semibold text-primary-foreground">
                     {pillar.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                  <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
                     {pillar.body}
                   </p>
                 </Reveal>
@@ -82,17 +76,17 @@ export default function OurSolutionPage() {
           </div>
         </section>
 
-        {/* Clinical Automation — navy */}
-        <section className="border-b border-border bg-primary text-primary-foreground">
+        {/* Clinical Automation — white */}
+        <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
-              <p className="eyebrow text-primary-foreground/70">
+              <p className="eyebrow text-accent">
                 Clinical automation in real-time
               </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Aegis: Clinical Automation in Real-Time
               </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
                 Ascend Aegis replaces manual, error-prone diagnostic workflows
                 with high-precision AI. Our platform is engineered to handle
                 complex medical data in real-time, allowing clinicians to focus
@@ -104,12 +98,12 @@ export default function OurSolutionPage() {
                 <Reveal
                   key={tool.title}
                   delay={i * 120}
-                  className="rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7"
+                  className="rounded-xl border border-border bg-card p-7 shadow-sm"
                 >
-                  <h3 className="text-lg font-semibold text-primary-foreground">
+                  <h3 className="text-lg font-semibold text-foreground">
                     {tool.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {tool.body}
                   </p>
                 </Reveal>
@@ -118,67 +112,63 @@ export default function OurSolutionPage() {
           </div>
         </section>
 
-        {/* Security — white */}
-        <section className="border-b border-border bg-background">
+        {/* Security — navy */}
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <p className="eyebrow text-accent">Infrastructure & security</p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+              <p className="eyebrow text-primary-foreground/70">
+                Infrastructure & security
+              </p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 Unlimited Scale. Uncompromising Security.
               </h2>
             </Reveal>
             <div className="mt-10 grid items-center gap-12 lg:grid-cols-2">
               <Reveal>
-                <p className="text-base font-semibold text-foreground">
+                <p className="text-base font-semibold">
                   Powered by the Aegis × Nuvollo Strategic Partnership.
                 </p>
-                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   By integrating Nuvollo's enterprise-grade cloud capabilities,
                   we have removed the infrastructure bottleneck. This means SOC
                   2 Type II security, real-time scaling, and low-latency global
                   reach for every diagnostic we run.
                 </p>
-                <p className="mt-4 text-pretty text-lg leading-relaxed text-muted-foreground">
+                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   By leveraging Nuvollo's infrastructure, Ascend Aegis maintains
                   a Capital-Light model, allowing us to scale diagnostic volume
                   globally with zero CAPEX investment in hardware.
                 </p>
               </Reveal>
               <Reveal className="flex items-center justify-center">
-                <div className="rounded-xl bg-primary p-10">
-                  <Image
-                    src="/images/nuvollo.webp"
-                    alt="Nuvollo - ride the cloud"
-                    width={250}
-                    height={120}
-                    className="object-contain"
-                  />
-                </div>
+                <Image
+                  src="/images/nuvollo.webp"
+                  alt="Nuvollo - ride the cloud"
+                  width={250}
+                  height={120}
+                  className="object-contain"
+                />
               </Reveal>
             </div>
           </div>
         </section>
 
-        {/* Vision — navy */}
-        <section className="bg-primary text-primary-foreground">
+        {/* Vision — white */}
+        <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
-              <p className="eyebrow text-primary-foreground/70">The future</p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              <p className="eyebrow text-accent">The future</p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Beyond Sleep: The Future of Diagnostics.
               </h2>
-              <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
                 We are building the intelligent backbone for the next generation
                 of medicine. By perfecting clinical automation in sleep, we are
                 creating the blueprint to accelerate accuracy and delivery of
                 care across the entire medical landscape.
               </p>
               <div className="mt-9">
-                <Button
-                  size="lg"
-                  className="bg-background text-foreground hover:bg-background/90"
-                  render={<Link href="/investors" />}
-                >
+                <Button size="lg" render={<Link href="/investors" />}>
                   View the Vision
                   <ArrowRight className="h-4 w-4" />
                 </Button>
