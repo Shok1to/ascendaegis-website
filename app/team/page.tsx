@@ -1,4 +1,5 @@
 import Image from "next/image"
+import Link from "next/link"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/parallax"
@@ -29,21 +30,25 @@ const board = [
     name: "Mr. Joey Bermudez",
     title: "Chairman of the Board",
     image: "/images/Joey.webp",
+    bioUrl: "https://ascendaegis.com/joey-bermudez",
   },
   {
     name: "Dr. Timothy Damaso",
     title: "Board Member · Physiomed",
     image: "/images/Timothy.webp",
+    bioUrl: "https://ascendaegis.com/dr-timothy-damaso",
   },
   {
     name: "Mr. Alberto Turri",
     title: "Board Member · FNS LLC",
     image: "/images/Alberto.webp",
+    bioUrl: "https://ascendaegis.com/alberto-turri",
   },
   {
     name: "Mr. Richard Bangyay",
     title: "Board Member",
     image: "/images/Richard.webp",
+    bioUrl: "https://ascendaegis.com/richard-bangyay",
   },
 ]
 
@@ -65,8 +70,17 @@ export default function TeamPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-        <section className="bg-primary text-primary-foreground">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
+        {/* Hero — navy with hex background */}
+        <section className="relative bg-primary text-primary-foreground">
+          <div
+            className="absolute inset-0 opacity-40"
+            style={{
+              backgroundImage: "url(/images/hero-bg.png)",
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+            }}
+          />
+          <div className="relative mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
               <p className="eyebrow text-primary-foreground/70">Our people</p>
               <h1 className="mt-4 text-balance text-4xl font-semibold tracking-tight sm:text-5xl">
@@ -76,7 +90,7 @@ export default function TeamPage() {
           </div>
         </section>
 
-        {/* Leadership */}
+        {/* Leadership — white */}
         <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
@@ -88,7 +102,7 @@ export default function TeamPage() {
               {leadership.map((member, i) => (
                 <Reveal key={member.name} delay={i * 120}>
                   <div className="flex flex-col items-center text-center">
-                    <div className="relative h-40 w-40 overflow-hidden rounded-full border-4 border-border">
+                    <div className="relative h-56 w-56 overflow-hidden rounded-full border-4 border-border">
                       <Image
                         src={member.image}
                         alt={member.name}
@@ -112,11 +126,11 @@ export default function TeamPage() {
           </div>
         </section>
 
-        {/* Board */}
-        <section className="border-b border-border bg-secondary/50">
+        {/* Board — navy */}
+        <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <h2 className="text-2xl font-semibold tracking-tight text-foreground">
+              <h2 className="text-2xl font-semibold tracking-tight text-primary-foreground">
                 Board of Directors
               </h2>
             </Reveal>
@@ -124,7 +138,7 @@ export default function TeamPage() {
               {board.map((member, i) => (
                 <Reveal key={member.name + member.title} delay={i * 100}>
                   <div className="flex flex-col items-center text-center">
-                    <div className="relative h-32 w-32 overflow-hidden rounded-full border-4 border-border">
+                    <div className="relative h-44 w-44 overflow-hidden rounded-full border-4 border-primary-foreground/20">
                       <Image
                         src={member.image}
                         alt={member.name}
@@ -132,12 +146,20 @@ export default function TeamPage() {
                         className="object-cover"
                       />
                     </div>
-                    <h3 className="mt-4 text-base font-semibold text-foreground">
+                    <h3 className="mt-4 text-base font-semibold text-primary-foreground">
                       {member.name}
                     </h3>
-                    <p className="text-sm text-muted-foreground">
+                    <p className="text-sm text-primary-foreground/70">
                       {member.title}
                     </p>
+                    <Link
+                      href={member.bioUrl}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="mt-4 inline-flex items-center rounded-md bg-primary-foreground/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary-foreground ring-1 ring-inset ring-primary-foreground/20 transition hover:bg-primary-foreground/20"
+                    >
+                      Professional Biography
+                    </Link>
                   </div>
                 </Reveal>
               ))}
@@ -145,7 +167,7 @@ export default function TeamPage() {
           </div>
         </section>
 
-        {/* Business Enablement */}
+        {/* Business Enablement — white */}
         <section className="bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
