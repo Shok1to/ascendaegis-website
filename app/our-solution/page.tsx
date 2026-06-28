@@ -1,4 +1,4 @@
-=import Link from "next/link"
+import Link from "next/link"
 import Image from "next/image"
 import { ArrowRight, Stethoscope, Zap, Globe2 } from "lucide-react"
 import { Button } from "@/components/ui/button"
@@ -40,7 +40,6 @@ export default function OurSolutionPage() {
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
       <main className="flex-1">
-
         {/* Hero */}
         <section className="bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
@@ -63,12 +62,20 @@ export default function OurSolutionPage() {
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
               {pillars.map((pillar, i) => (
-                <Reveal key={pillar.title} delay={i * 120} className="bg-card p-7">
+                <Reveal
+                  key={pillar.title}
+                  delay={i * 120}
+                  className="bg-card p-7"
+                >
                   <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <pillar.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-foreground">{pillar.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{pillar.body}</p>
+                  <h3 className="mt-5 text-lg font-semibold text-foreground">
+                    {pillar.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {pillar.body}
+                  </p>
                 </Reveal>
               ))}
             </div>
@@ -79,7 +86,9 @@ export default function OurSolutionPage() {
         <section className="border-b border-border bg-secondary/50">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal className="max-w-2xl">
-              <p className="eyebrow text-accent">Clinical automation in real-time</p>
+              <p className="eyebrow text-accent">
+                Clinical automation in real-time
+              </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Aegis: Clinical Automation in Real-Time
               </h2>
@@ -97,8 +106,12 @@ export default function OurSolutionPage() {
                   delay={i * 120}
                   className="rounded-xl border border-border bg-background p-7 shadow-sm"
                 >
-                  <h3 className="text-lg font-semibold text-foreground">{tool.title}</h3>
-                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{tool.body}</p>
+                  <h3 className="text-lg font-semibold text-foreground">
+                    {tool.title}
+                  </h3>
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                    {tool.body}
+                  </p>
                 </Reveal>
               ))}
             </div>
@@ -109,7 +122,9 @@ export default function OurSolutionPage() {
         <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
             <Reveal>
-              <p className="eyebrow text-primary-foreground/70">Infrastructure & security</p>
+              <p className="eyebrow text-primary-foreground/70">
+                Infrastructure & security
+              </p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 Unlimited Scale. Uncompromising Security.
               </h2>
@@ -171,7 +186,6 @@ export default function OurSolutionPage() {
             </Reveal>
           </div>
         </section>
-
       </main>
       <SiteFooter />
     </div>
