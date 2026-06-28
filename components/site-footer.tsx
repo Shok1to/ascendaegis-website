@@ -30,17 +30,17 @@ export function SiteFooter() {
       <div className="mx-auto max-w-6xl px-4 py-14 sm:px-6 lg:px-8">
         <div className="grid gap-10 md:grid-cols-2 lg:grid-cols-4">
           <div className="lg:col-span-2">
-            <Link href="/" className="flex items-center gap-2.5 text-primary">
+            <Link href="/" className="flex items-center gap-2.5">
               <ShieldLogo />
-              <span className="text-base font-semibold tracking-tight text-foreground">
+              <span className="text-base font-semibold tracking-tight text-primary-foreground">
                 Ascend Aegis
               </span>
             </Link>
-            <p className="mt-4 max-w-sm text-pretty text-sm leading-relaxed text-muted-foreground">
+            <p className="mt-4 max-w-sm text-pretty text-sm leading-relaxed text-primary-foreground/70">
               Regulatory-compliant AI for clinical automation. Starting with
               sleep, scaling across the medical landscape.
             </p>
-            <address className="mt-5 text-sm not-italic leading-relaxed text-muted-foreground">
+            <address className="mt-5 text-sm not-italic leading-relaxed text-primary-foreground/70">
               Ascend Aegis Corporation
               <br />
               95 Mural Street, Richmond Hill, Ontario, Canada L4B 3G2
@@ -49,13 +49,15 @@ export function SiteFooter() {
 
           {footerNav.map((group) => (
             <div key={group.heading}>
-              <h3 className="eyebrow text-muted-foreground">{group.heading}</h3>
+              <h3 className="eyebrow text-primary-foreground/50">
+                {group.heading}
+              </h3>
               <ul className="mt-4 space-y-3">
                 {group.links.map((link) => (
                   <li key={link.label}>
                     <Link
                       href={link.href}
-                      className="text-sm text-foreground/80 transition-colors hover:text-primary"
+                      className="text-sm text-primary-foreground/80 transition-colors hover:text-primary-foreground"
                     >
                       {link.label}
                     </Link>
@@ -66,7 +68,7 @@ export function SiteFooter() {
           ))}
         </div>
 
-        <div className="mt-12 flex flex-col gap-3 border-t border-border pt-6 text-xs text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+        <div className="mt-12 flex flex-col gap-3 border-t border-primary-foreground/20 pt-6 text-xs text-primary-foreground/50 sm:flex-row sm:items-center sm:justify-between">
           <p>
             Copyright &copy; {new Date().getFullYear()} Ascend Aegis
             Corporation. All rights reserved.
