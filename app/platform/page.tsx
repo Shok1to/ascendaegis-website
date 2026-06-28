@@ -57,19 +57,19 @@ export default function PlatformPage() {
           </div>
         </div>
 
-        {/* Capabilities — navy */}
-        <section className="border-b border-border bg-primary text-primary-foreground">
+        {/* Capabilities — white */}
+        <section className="border-b border-border bg-background">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
-            <div className="grid gap-px overflow-hidden rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 md:grid-cols-3">
+            <div className="grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
               {capabilities.map((cap) => (
-                <div key={cap.title} className="bg-primary p-7">
-                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary-foreground/10 text-primary-foreground">
+                <div key={cap.title} className="bg-card p-7">
+                  <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
                     <cap.icon className="h-5 w-5" aria-hidden="true" />
                   </div>
-                  <h3 className="mt-5 text-lg font-semibold text-primary-foreground">
+                  <h3 className="mt-5 text-lg font-semibold text-foreground">
                     {cap.title}
                   </h3>
-                  <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
+                  <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
                     {cap.body}
                   </p>
                 </div>
@@ -78,19 +78,21 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* Sleep Tool — white */}
+        {/* Sleep Tool — navy */}
         <section
           id="sleep-tool"
-          className="border-b border-border bg-background scroll-mt-16"
+          className="border-b border-border bg-primary text-primary-foreground scroll-mt-16"
         >
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <div className="grid items-center gap-12 lg:grid-cols-2">
               <div>
-                <p className="eyebrow text-accent">Aegis Sleep Tool</p>
-                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
+                <p className="eyebrow text-primary-foreground/70">
+                  Aegis Sleep Tool
+                </p>
+                <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                   Our flagship tool, validated against clinical standards.
                 </h2>
-                <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
+                <p className="mt-5 text-pretty leading-relaxed text-primary-foreground/85">
                   By automating the scoring process, we eliminate the 2&ndash;4
                   hour manual bottleneck per study, delivering instant,
                   consistent results that exceed current clinical accuracy
@@ -98,7 +100,7 @@ export default function PlatformPage() {
                   with leading sleep centers.
                 </p>
               </div>
-              <div className="overflow-hidden rounded-xl border border-border bg-card">
+              <div className="overflow-hidden rounded-xl border border-primary-foreground/20">
                 <Image
                   src="/images/sleep-signal.png"
                   alt="Polysomnography signal channels visualized as clean stacked waveforms"
@@ -115,20 +117,15 @@ export default function PlatformPage() {
           </div>
         </section>
 
-        {/* Security — navy */}
-        <section
-          id="security"
-          className="bg-primary text-primary-foreground scroll-mt-16"
-        >
+        {/* Security — white */}
+        <section id="security" className="bg-background scroll-mt-16">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-24">
             <div className="max-w-2xl">
-              <p className="eyebrow text-primary-foreground/70">
-                Security &amp; compliance
-              </p>
-              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-primary-foreground sm:text-4xl">
+              <p className="eyebrow text-accent">Security &amp; compliance</p>
+              <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
                 Built on a regulatory-compliant backbone.
               </h2>
-              <p className="mt-5 text-pretty leading-relaxed text-primary-foreground/85">
+              <p className="mt-5 text-pretty leading-relaxed text-muted-foreground">
                 Through the Aegis &times; Nuvollo partnership, every diagnostic
                 runs on SOC 2 Type II infrastructure with real-time scaling and
                 low-latency global reach.
@@ -138,8 +135,8 @@ export default function PlatformPage() {
               <ComplianceGrid />
             </div>
 
-            <div className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-8 sm:flex-row sm:items-center sm:justify-between">
-              <p className="text-pretty text-lg font-medium text-primary-foreground">
+            <div className="mt-12 flex flex-col items-start gap-4 rounded-xl border border-border bg-card p-8 sm:flex-row sm:items-center sm:justify-between">
+              <p className="text-pretty text-lg font-medium text-foreground">
                 See the Aegis platform applied to your clinic&apos;s workflow.
               </p>
               <Button size="lg" render={<Link href="/for-clinics#contact" />}>
