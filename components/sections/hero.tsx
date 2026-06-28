@@ -13,7 +13,7 @@ export function Hero() {
         <div
           className="h-full w-full opacity-25"
           style={{
-            backgroundImage: "url(/images/hero-abstract.png)",
+            backgroundImage: "url(/images/hero-bg.png)",
             backgroundSize: "cover",
             backgroundPosition: "center",
           }}
