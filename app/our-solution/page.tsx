@@ -95,16 +95,18 @@ export default function OurSolutionPage() {
                 Aegis: Clinical Automation in Real-Time
               </h2>
             </Reveal>
+            <Reveal>
+              <p className="mt-6 text-pretty text-lg leading-relaxed text-muted-foreground">
+                Ascend Aegis replaces manual, error-prone diagnostic workflows
+                with high-precision AI. Our platform is engineered to handle
+                complex medical data in real-time, allowing clinicians to focus
+                on treatment rather than data entry.
+              </p>
+            </Reveal>
             <div className="mt-8 grid items-start gap-12 lg:grid-cols-2">
               <Reveal>
-                <p className="text-pretty text-lg leading-relaxed text-muted-foreground">
-                  Ascend Aegis replaces manual, error-prone diagnostic workflows
-                  with high-precision AI. Our platform is engineered to handle
-                  complex medical data in real-time, allowing clinicians to
-                  focus on treatment rather than data entry.
-                </p>
-                <div className="mt-8 grid gap-6">
-                  {tools.map((tool, i) => (
+                <div className="grid gap-6">
+                  {tools.map((tool) => (
                     <div
                       key={tool.title}
                       className="rounded-xl border border-border bg-card p-6 shadow-sm"
