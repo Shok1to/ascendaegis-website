@@ -4,6 +4,7 @@ import Link from "next/link"
 import { usePathname } from "next/navigation"
 import { useState } from "react"
 import { Menu, X, ChevronDown } from "lucide-react"
+import { useSession, signOut } from "next-auth/react"
 import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ShieldLogo } from "@/components/shield-logo"
@@ -24,6 +25,7 @@ const moreLinks = [
 
 export function SiteHeader() {
   const pathname = usePathname()
+  const { data: session, status } = useSession()
   const [open, setOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
 
@@ -95,6 +97,20 @@ export function SiteHeader() {
           <Button size="sm" render={<Link href="/for-clinics#contact" />}>
             Request a Demo
           </Button>
+          {status === "authenticated" ? (
+            <>
+              <span className="px-2 text-sm text-muted-foreground">
+                {session.user?.name}
+              </span>
+              <Button size="sm" variant="outline" onClick={() => signOut()}>
+                Sign Out
+              </Button>
+            </>
+          ) : (
+            <Button size="sm" variant="outline" render={<Link href="/register" />}>
+              Sign Up
+            </Button>
+          )}
         </div>
 
         <button
@@ -133,6 +149,26 @@ export function SiteHeader() {
             >
               Request a Demo
             </Button>
+            {status === "authenticated" ? (
+              <Button
+                variant="outline"
+                onClick={() => {
+                  setOpen(false)
+                  signOut()
+                }}
+              >
+                Sign Out
+              </Button>
+            ) : (
+              <Button
+                variant="outline"
+                render={
+                  <Link href="/register" onClick={() => setOpen(false)} />
+                }
+              >
+                Sign Up
+              </Button>
+            )}
           </nav>
         </div>
       )}
