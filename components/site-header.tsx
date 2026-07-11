@@ -99,9 +99,12 @@ export function SiteHeader() {
           </Button>
           {status === "authenticated" ? (
             <>
-              <span className="px-2 text-sm text-muted-foreground">
+              <Link
+                href="/dashboard"
+                className="px-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+              >
                 {session.user?.name}
-              </span>
+              </Link>
               <Button size="sm" variant="outline" onClick={() => signOut()}>
                 Sign Out
               </Button>
@@ -150,15 +153,24 @@ export function SiteHeader() {
               Request a Demo
             </Button>
             {status === "authenticated" ? (
-              <Button
-                variant="outline"
-                onClick={() => {
-                  setOpen(false)
-                  signOut()
-                }}
-              >
-                Sign Out
-              </Button>
+              <>
+                <Link
+                  href="/dashboard"
+                  onClick={() => setOpen(false)}
+                  className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-secondary"
+                >
+                  {session.user?.name}
+                </Link>
+                <Button
+                  variant="outline"
+                  onClick={() => {
+                    setOpen(false)
+                    signOut()
+                  }}
+                >
+                  Sign Out
+                </Button>
+              </>
             ) : (
               <Button
                 variant="outline"

@@ -2,12 +2,15 @@
 
 import { useState, type FormEvent } from 'react'
 import Link from 'next/link'
-import { useRouter } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import { signIn } from 'next-auth/react'
 import { Button } from '@/components/ui/button'
 
 export function LoginForm() {
   const router = useRouter()
+  const searchParams = useSearchParams()
+  const callbackUrl = searchParams.get('callbackUrl') || '/dashboard'
+  const justReset = searchParams.get('reset') === 'success'
   const [error, setError] = useState<string | null>(null)
   const [submitting, setSubmitting] = useState(false)
 
@@ -32,7 +35,7 @@ export function LoginForm() {
       return
     }
 
-    router.push('/')
+    router.push(callbackUrl)
     router.refresh()
   }
 
@@ -41,6 +44,12 @@ export function LoginForm() {
       onSubmit={handleSubmit}
       className="rounded-xl border border-border bg-card p-6 sm:p-8"
     >
+      {justReset && (
+        <p className="mb-5 rounded-md bg-accent/10 px-3 py-2 text-sm text-accent">
+          Your password has been reset. Sign in with your new password.
+        </p>
+      )}
+
       <div className="grid gap-5">
         <div>
           <label htmlFor="email" className="text-sm font-medium text-foreground">
@@ -56,12 +65,20 @@ export function LoginForm() {
           />
         </div>
         <div>
-          <label
-            htmlFor="password"
-            className="text-sm font-medium text-foreground"
-          >
-            Password
-          </label>
+          <div className="flex items-center justify-between">
+            <label
+              htmlFor="password"
+              className="text-sm font-medium text-foreground"
+            >
+              Password
+            </label>
+            <Link
+              href="/forgot-password"
+              className="text-xs font-medium text-primary hover:underline"
+            >
+              Forgot password?
+            </Link>
+          </div>
           <input
             id="password"
             name="password"
