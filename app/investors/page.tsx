@@ -1,6 +1,8 @@
 import type { Metadata } from "next"
 import Link from "next/link"
+import { redirect } from "next/navigation"
 import { ArrowRight, TrendingUp, Layers, Banknote } from "lucide-react"
+import { auth } from "@/auth"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/parallax"
@@ -48,7 +50,12 @@ const roadmap = [
   },
 ]
 
-export default function InvestorsPage() {
+export default async function InvestorsPage() {
+  const session = await auth()
+  if (!session?.user) {
+    redirect('/login?callbackUrl=/investors')
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />
