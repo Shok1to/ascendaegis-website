@@ -53,7 +53,7 @@ const roadmap = [
 export default async function InvestorsPage() {
   const session = await auth()
   if (!session?.user) {
-    redirect('/login?callbackUrl=/investors')
+    redirect("/login?callbackUrl=/investors")
   }
 
   return (
@@ -159,7 +159,10 @@ export default async function InvestorsPage() {
                   diagnostics.
                 </p>
               </div>
-              <Button size="lg" render={<Link href="/for-clinics#contact" />}>
+              <Button
+                size="lg"
+                render={<a href="mailto:investor-relations@ascendaegis.com" />}
+              >
                 Get in touch
                 <ArrowRight className="h-4 w-4" />
               </Button>
