@@ -104,6 +104,12 @@ export default function ForClinicsPage() {
                   team will walk you through how Aegis automates scoring and
                   integrates with your existing systems.
                 </p>
+                <a
+                  href="mailto:support@ascendaegis.com"
+                  className="mt-4 inline-block text-sm text-primary-foreground/85 underline transition-colors hover:text-primary-foreground"
+                >
+                  support@ascendaegis.com
+                </a>
               </Reveal>
               <ContactForm />
             </div>
