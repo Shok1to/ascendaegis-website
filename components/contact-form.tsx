@@ -1,8 +1,8 @@
-'use client'
+"use client"
 
-import { useState } from 'react'
-import { CheckCircle2 } from 'lucide-react'
-import { Button } from '@/components/ui/button'
+import { useState } from "react"
+import { CheckCircle2 } from "lucide-react"
+import { Button } from "@/components/ui/button"
 
 export function ContactForm() {
   const [submitted, setSubmitted] = useState(false)
@@ -24,9 +24,27 @@ export function ContactForm() {
 
   return (
     <form
-      onSubmit={(e) => {
+      onSubmit={async (e) => {
         e.preventDefault()
-        setSubmitted(true)
+        const form = e.currentTarget
+        const formData = new FormData(form)
+        const data = {
+          name: formData.get("name"),
+          email: formData.get("email"),
+          clinic: formData.get("clinic"),
+          role: formData.get("role"),
+          message: formData.get("message"),
+        }
+        const res = await fetch("/api/contact", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify(data),
+        })
+        if (res.ok) {
+          setSubmitted(true)
+        } else {
+          alert("Something went wrong. Please try again or email us directly.")
+        }
       }}
       className="rounded-xl border border-border bg-card p-6 sm:p-8"
     >
@@ -67,7 +85,7 @@ export function ContactForm() {
 function Field({
   id,
   label,
-  type = 'text',
+  type = "text",
   required,
   autoComplete,
 }: {
