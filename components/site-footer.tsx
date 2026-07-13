@@ -45,6 +45,12 @@ export function SiteFooter() {
               <br />
               95 Mural Street, Richmond Hill, Ontario, Canada L4B 3G2
             </address>
+            <a
+              href="mailto:info@ascendaegis.com"
+              className="mt-3 block text-sm text-foreground/80 transition-colors hover:text-primary"
+            >
+              info@ascendaegis.com
+            </a>
           </div>
 
           {footerNav.map((group) => (
