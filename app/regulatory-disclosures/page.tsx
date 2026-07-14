@@ -1,3 +1,5 @@
+import { auth } from "@/auth"
+import { redirect } from "next/navigation"
 import { SiteHeader } from "@/components/site-header"
 import { SiteFooter } from "@/components/site-footer"
 import { Reveal } from "@/components/parallax"
@@ -20,7 +22,12 @@ const sections = [
   },
 ]
 
-export default function RegulatoryDisclosuresPage() {
+export default async function RegulatoryDisclosuresPage() {
+  const session = await auth()
+  if (!session?.user) {
+    redirect("/login?callbackUrl=/regulatory-disclosures")
+  }
+
   return (
     <div className="flex min-h-screen flex-col">
       <SiteHeader />

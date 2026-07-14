@@ -52,19 +52,6 @@ const board = [
   },
 ]
 
-const enablement = [
-  {
-    name: "Dean Pietersen",
-    title: "Corporate Secretary",
-    bio: "Dean Pietersen brings 20+ years of operations and logistics experience. He manages governance and regulatory compliance, ensuring operational integrity and board alignment as the company scales its AI-driven diagnostic solutions globally.",
-  },
-  {
-    name: "Efren Antimano",
-    title: "Technical Partnerships",
-    bio: "A seasoned leader with over 28 years in IT and consumer electronics, Efren previously held strategic sales roles at Intel in Canada and Asia. He specializes in business development and high-level partnerships, driving growth through customer-centric strategies and collaborative innovation.",
-  },
-]
-
 export default function TeamPage() {
   return (
     <div className="flex min-h-screen flex-col">
@@ -158,34 +145,6 @@ export default function TeamPage() {
                     >
                       Professional Biography
                     </Link>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
-          </div>
-        </section>
-
-        {/* Business Enablement — white */}
-        <section className="bg-background">
-          <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <Reveal>
-              <h2 className="text-2xl font-semibold tracking-tight text-foreground">
-                Business Enablement
-              </h2>
-            </Reveal>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2">
-              {enablement.map((member, i) => (
-                <Reveal key={member.name} delay={i * 120}>
-                  <div className="rounded-xl border border-border bg-card p-7">
-                    <h3 className="text-lg font-semibold text-foreground">
-                      {member.name}
-                    </h3>
-                    <p className="text-sm font-medium text-accent">
-                      {member.title}
-                    </p>
-                    <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                      {member.bio}
-                    </p>
                   </div>
                 </Reveal>
               ))}
