@@ -5,8 +5,6 @@ const footerNav = [
   {
     heading: "Platform",
     links: [
-      { href: "/platform", label: "The Aegis Platform" },
-      { href: "/platform#sleep-tool", label: "Aegis Sleep Tool" },
       { href: "/security-compliance", label: "Security & Compliance" },
       { href: "/clinical-validation", label: "Clinical Validation" },
     ],

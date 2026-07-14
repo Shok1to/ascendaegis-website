@@ -13,7 +13,6 @@ const primaryLinks = [
   { href: "/our-solution", label: "Our Solution" },
   { href: "/clinical-validation", label: "Clinical Validation" },
   { href: "/security-compliance", label: "Security & Compliance" },
-  { href: "/platform", label: "The Aegis Platform" },
 ]
 
 const moreLinks = [
@@ -54,7 +53,7 @@ export function SiteHeader() {
                   "rounded-md px-3 py-2 text-sm font-medium transition-colors",
                   active
                     ? "text-primary"
-                    : "text-muted-foreground hover:text-foreground"
+                    : "text-muted-foreground hover:text-foreground",
                 )}
               >
                 {link.label}
@@ -72,7 +71,7 @@ export function SiteHeader() {
               <ChevronDown
                 className={cn(
                   "h-4 w-4 transition-transform",
-                  moreOpen && "rotate-180"
+                  moreOpen && "rotate-180",
                 )}
               />
             </button>
@@ -110,7 +109,11 @@ export function SiteHeader() {
               </Button>
             </>
           ) : (
-            <Button size="sm" variant="outline" render={<Link href="/register" />}>
+            <Button
+              size="sm"
+              variant="outline"
+              render={<Link href="/register" />}
+            >
               Sign Up
             </Button>
           )}

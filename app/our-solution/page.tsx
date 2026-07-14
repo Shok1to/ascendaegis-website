@@ -152,14 +152,10 @@ export default function OurSolutionPage() {
                 </p>
                 <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
                   By integrating Nuvollo's enterprise-grade cloud capabilities,
-                  we have removed the infrastructure bottleneck. This means SOC
-                  2 Type II security, real-time scaling, and low-latency global
-                  reach for every diagnostic we run.
-                </p>
-                <p className="mt-4 text-pretty text-lg leading-relaxed text-primary-foreground/85">
-                  By leveraging Nuvollo's infrastructure, Ascend Aegis maintains
-                  a Capital-Light model, allowing us to scale diagnostic volume
-                  globally with zero CAPEX investment in hardware.
+                  Ascend Aegis provides a secure, scalable foundation that
+                  supports faster diagnostics worldwide—with SOC 2 Type II
+                  security, real-time scaling, and reliable low-latency
+                  performance.
                 </p>
               </Reveal>
               <Reveal className="flex items-center justify-center">
