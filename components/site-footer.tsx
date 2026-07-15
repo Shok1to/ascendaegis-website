@@ -16,7 +16,6 @@ const footerNav = [
       { href: "/for-clinics", label: "For Clinics" },
       { href: "/investors", label: "Investors" },
       { href: "/team", label: "Team" },
-      { href: "/regulatory-disclosures", label: "Regulatory Disclosures" },
       { href: "/for-clinics#contact", label: "Contact" },
     ],
   },
@@ -41,7 +40,7 @@ export function SiteFooter() {
             <address className="mt-5 text-sm not-italic leading-relaxed text-muted-foreground">
               Ascend Aegis Corporation
               <br />
-              95 Mural Street, Richmond Hill, Ontario, Canada L4B 3G2
+              325 Front Street W., 4th Floor, Toronto, Ontario, Canada M5V 2Y1
             </address>
             <a
               href="mailto:info@ascendaegis.com"
