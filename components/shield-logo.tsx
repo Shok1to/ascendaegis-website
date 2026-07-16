@@ -4,7 +4,7 @@ import { cn } from "@/lib/utils"
 export function ShieldLogo({ className }: { className?: string }) {
   return (
     <Image
-      src="/images/logo.svg"
+      src="/logo.svg"
       alt="Ascend Aegis"
       width={800}
       height={250}
