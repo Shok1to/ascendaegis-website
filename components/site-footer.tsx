@@ -29,9 +29,7 @@ export function SiteFooter() {
           <div className="lg:col-span-2">
             <Link href="/" className="flex items-center gap-2.5 text-primary">
               <ShieldLogo />
-              <span className="text-base font-semibold tracking-tight text-foreground">
-                Ascend Aegis
-              </span>
+              <span className="sr-only">Ascend Aegis</span>
             </Link>
             <p className="mt-4 max-w-sm text-pretty text-sm leading-relaxed text-muted-foreground">
               Regulatory-compliant AI for clinical automation. Starting with

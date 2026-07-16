@@ -36,9 +36,7 @@ export function SiteHeader() {
           onClick={() => setOpen(false)}
         >
           <ShieldLogo />
-          <span className="text-base font-semibold tracking-tight text-foreground">
-            Ascend Aegis
-          </span>
+          <span className="sr-only">Ascend Aegis</span>
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
