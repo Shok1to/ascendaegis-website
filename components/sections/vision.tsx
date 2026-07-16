@@ -1,7 +1,7 @@
-import Link from 'next/link'
-import { ArrowRight } from 'lucide-react'
-import { Button } from '@/components/ui/button'
-import { ParallaxLayer, Reveal } from '@/components/parallax'
+import Link from "next/link"
+import { ArrowRight } from "lucide-react"
+import { Button } from "@/components/ui/button"
+import { ParallaxLayer, Reveal } from "@/components/parallax"
 
 export function Vision() {
   return (
@@ -25,7 +25,7 @@ export function Vision() {
               <Button
                 size="lg"
                 className="bg-background text-foreground hover:bg-background/90"
-                render={<Link href="/investors" />}
+                render={<Link href="/vision" />}
               >
                 View the Vision
                 <ArrowRight className="h-4 w-4" />
@@ -40,19 +40,19 @@ export function Vision() {
             <ol className="space-y-6">
               {[
                 {
-                  step: '01',
-                  title: 'Sleep diagnostics',
-                  desc: 'The validated wedge: automated, real-time PSG scoring.',
+                  step: "01",
+                  title: "Sleep diagnostics",
+                  desc: "The validated wedge: automated, real-time PSG scoring.",
                 },
                 {
-                  step: '02',
-                  title: 'Adjacent modalities',
-                  desc: 'Extending the engine to neighbouring diagnostic categories.',
+                  step: "02",
+                  title: "Adjacent modalities",
+                  desc: "Extending the engine to neighbouring diagnostic categories.",
                 },
                 {
-                  step: '03',
-                  title: 'The Diagnostic OS',
-                  desc: 'A regulatory-compliant standard across the medical landscape.',
+                  step: "03",
+                  title: "The Diagnostic OS",
+                  desc: "A regulatory-compliant standard across the medical landscape.",
                 },
               ].map((item) => (
                 <li key={item.step} className="flex gap-5">

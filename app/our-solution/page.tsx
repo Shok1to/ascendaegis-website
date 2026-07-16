@@ -186,7 +186,7 @@ export default function OurSolutionPage() {
                 care across the entire medical landscape.
               </p>
               <div className="mt-9">
-                <Button size="lg" render={<Link href="/investors" />}>
+                <Button size="lg" render={<Link href="/vision" />}>
                   View the Vision
                   <ArrowRight className="h-4 w-4" />
                 </Button>
