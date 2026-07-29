@@ -29,7 +29,7 @@ export function CTA() {
               size="lg"
               variant="outline"
               className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              render={<Link href="/platform" />}
+              render={<Link href="/our-solution" />}
             >
               View API Specs
             </Button>
