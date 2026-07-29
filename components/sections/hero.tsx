@@ -33,7 +33,7 @@ export function Hero() {
             </span>
           </p>
           <h1 className="mt-6 text-balance text-4xl font-semibold leading-[1.1] tracking-tight sm:text-5xl lg:text-6xl">
-            Turn days of manual sleep scoring into minutes.
+            Sleep diagnostics, simplified.
           </h1>
           <p className="mt-6 max-w-2xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
             Regulatory-compliant AI for clinical automation. Starting with
@@ -43,9 +43,9 @@ export function Hero() {
             <Button
               size="lg"
               className="bg-background text-foreground hover:bg-background/90"
-              render={<Link href="/platform" />}
+              render={<Link href="/our-solution" />}
             >
-              Explore the Aegis Platform
+              Explore Our Solution
               <ArrowRight className="h-4 w-4" />
             </Button>
             <Button

@@ -4,12 +4,11 @@ import { cn } from "@/lib/utils"
 export function ShieldLogo({ className }: { className?: string }) {
   return (
     <Image
-      src="/logo.svg"
+      src="/images/logo.webp"
       alt="Ascend Aegis"
-      width={800}
-      height={250}
-      unoptimized
-      className={cn("h-14 w-auto object-contain", className)}
+      width={80}
+      height={80}
+      className={cn("h-16 w-16 object-contain", className)}
     />
   )
 }
