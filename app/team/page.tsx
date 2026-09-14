@@ -7,8 +7,8 @@ import { Reveal } from "@/components/parallax"
 const leadership = [
   {
     name: "Richard Bangyay",
-    title: "Founder / CEO",
-    bio: 'Focused on the intersection of AI-driven medical automation and scalable business unit economics. Richard leads the strategic vision for Ascend Aegis, moving the company from a "Wedge" strategy in sleep diagnostics toward a global Diagnostic Operating System.',
+    title: "Founder",
+    bio: 'Focused on the intersection of AI-driven medical automation and scalable business unit economics, Richard founded Ascend Aegis and continues to shape its long-term direction, moving the company from a "Wedge" strategy in sleep diagnostics toward a global Diagnostic Operating System.',
     image: "/images/Richard.webp",
   },
   {
@@ -19,8 +19,8 @@ const leadership = [
   },
   {
     name: "Brianna Morissette",
-    title: "Chief of Staff",
-    bio: 'Brianna serves as the CEO\'s strategic lead at Ascend Aegis, driving operational excellence. She manages project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
+    title: "CEO",
+    bio: 'Brianna leads the strategic vision at Ascend Aegis, driving operational excellence. She oversees project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
     image: "/images/Brianna.webp",
   },
 ]
@@ -49,6 +49,12 @@ const board = [
     title: "Board Member",
     image: "/images/Richard.webp",
     bioUrl: "/richard-bangyay",
+  },
+  {
+    name: "Ms. Brianna Morissette",
+    title: "Board Member",
+    image: "/images/Brianna.webp",
+    bioUrl: "/brianna-morissette",
   },
 ]
 
@@ -121,7 +127,7 @@ export default function TeamPage() {
                 Board of Directors
               </h2>
             </Reveal>
-            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div className="mt-12 grid gap-8 sm:grid-cols-2 lg:grid-cols-5">
               {board.map((member, i) => (
                 <Reveal key={member.name + member.title} delay={i * 100}>
                   <div className="flex flex-col items-center text-center">
