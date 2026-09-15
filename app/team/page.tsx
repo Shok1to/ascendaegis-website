@@ -12,16 +12,16 @@ const leadership = [
     image: "/images/Richard.webp",
   },
   {
-    name: "Dr. Stephen Glazer",
-    title: "Chief Medical Officer",
-    bio: "A cornerstone of our clinical validation process. Dr. Glazer leads the weekly validation sessions, ensuring that every AI-driven insight meets the highest standards of sleep medicine. His oversight bridges the gap between machine learning and patient-centric care.",
-    image: "/images/Stephen.webp",
-  },
-  {
     name: "Brianna Morissette",
     title: "CEO",
     bio: 'Brianna leads the strategic vision at Ascend Aegis, driving operational excellence. She oversees project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
     image: "/images/Brianna.webp",
+  },
+  {
+    name: "Dr. Stephen Glazer",
+    title: "Chief Medical Officer",
+    bio: "A cornerstone of our clinical validation process. Dr. Glazer leads the weekly validation sessions, ensuring that every AI-driven insight meets the highest standards of sleep medicine. His oversight bridges the gap between machine learning and patient-centric care.",
+    image: "/images/Stephen.webp",
   },
 ]
 
