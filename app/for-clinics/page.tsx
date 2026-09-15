@@ -105,10 +105,10 @@ export default function ForClinicsPage() {
                   integrates with your existing systems.
                 </p>
                 <a
-                  href="mailto:support@ascendaegis.com"
+                  href="mailto:support@aaegis-ai.com"
                   className="mt-4 inline-block text-sm text-primary-foreground/85 underline transition-colors hover:text-primary-foreground"
                 >
-                  support@ascendaegis.com
+                  support@aaegis-ai.com
                 </a>
               </Reveal>
               <ContactForm />

@@ -210,7 +210,7 @@ export default async function InvestorsPage() {
               </div>
               <Button
                 size="lg"
-                render={<a href="mailto:investor-relations@ascendaegis.com" />}
+                render={<a href="mailto:investor-relations@aaegis-ai.com" />}
               >
                 Get in touch
                 <ArrowRight className="h-4 w-4" />

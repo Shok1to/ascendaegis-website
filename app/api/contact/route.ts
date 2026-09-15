@@ -16,7 +16,7 @@ export async function POST(req: Request) {
 
     await resend.emails.send({
       from: process.env.EMAIL_FROM || "onboarding@resend.dev",
-      to: "support@ascendaegis.com",
+      to: "support@aaegis-ai.com",
       subject: `New Demo Request from ${name}`,
       html: `
         <p><strong>Name:</strong> ${name}</p>

@@ -41,10 +41,10 @@ export function SiteFooter() {
               325 Front Street W., 4th Floor, Toronto, Ontario, Canada M5V 2Y1
             </address>
             <a
-              href="mailto:info@ascendaegis.com"
+              href="mailto:info@aaegis-ai.com"
               className="mt-3 block text-sm text-foreground/80 transition-colors hover:text-primary"
             >
-              info@ascendaegis.com
+              info@aaegis-ai.com
             </a>
           </div>
 
