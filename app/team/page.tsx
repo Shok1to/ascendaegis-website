@@ -13,7 +13,7 @@ const leadership = [
   },
   {
     name: "Brianna Morissette",
-    title: "CEO",
+    title: "President · Chief Executive Officer",
     bio: 'Brianna leads the strategic vision at Ascend Aegis, driving operational excellence. She oversees project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
     image: "/images/Brianna.webp",
   },

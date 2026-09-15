@@ -8,7 +8,7 @@ import { Reveal } from "@/components/parallax"
 
 const metrics = [
   {
-    value: "87.4%",
+    value: "95.39%",
     label: "Epoch-by-Epoch Agreement",
     body: "Matching or exceeding the average inter-scorer agreement between two expert human RPSGTs across 5-stage sleep scoring.",
   },
