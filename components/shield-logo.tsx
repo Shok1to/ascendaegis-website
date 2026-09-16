@@ -6,8 +6,8 @@ export function ShieldLogo({ className }: { className?: string }) {
     <Image
       src="/images/logo.svg"
       alt="Ascend Aegis"
-      width={80}
-      height={80}
+      width={100}
+      height={100}
       className={cn("h-16 w-16 object-contain", className)}
     />
   )
