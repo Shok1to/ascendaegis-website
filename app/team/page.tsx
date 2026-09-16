@@ -145,12 +145,12 @@ export default function TeamPage() {
                     <p className="text-sm text-primary-foreground/70">
                       {member.title}
                     </p>
-                    <Link
+                    {/* <Link
                       href={member.bioUrl}
                       className="mt-4 inline-flex items-center rounded-md bg-primary-foreground/10 px-4 py-2 text-xs font-semibold uppercase tracking-widest text-primary-foreground ring-1 ring-inset ring-primary-foreground/20 transition hover:bg-primary-foreground/20"
                     >
                       Professional Biography
-                    </Link>
+                    </Link> */}
                   </div>
                 </Reveal>
               ))}
