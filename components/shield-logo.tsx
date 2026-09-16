@@ -8,7 +8,7 @@ export function ShieldLogo({ className }: { className?: string }) {
       alt="Ascend Aegis"
       width={100}
       height={100}
-      className={cn("h-16 w-16 object-contain", className)}
+      className={cn("h-20 w-20 object-contain", className)}
     />
   )
 }
