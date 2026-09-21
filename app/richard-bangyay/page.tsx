@@ -30,7 +30,7 @@ export default function RichardBangyayPage() {
                 Richard Bangyay
               </h1>
               <p className="mt-3 text-lg text-primary-foreground/85">
-                Board Member | Founder &amp; CEO, Ascend Aegis Corporation
+                Board Member | Founder, Ascend Aegis Corporation
               </p>
             </Reveal>
           </div>
@@ -55,7 +55,7 @@ export default function RichardBangyayPage() {
                   Richard Bangyay is a resilient and visionary leader with over
                   30 years of experience navigating high-stakes regulatory
                   environments and delivering innovative digital solutions. As
-                  the Founder and CEO of Ascend Aegis Corporation, he leverages
+                  the Founder of Ascend Aegis Corporation, he leverages
                   a unique intersection of financial strategy, global
                   infrastructure management, and self-taught technology
                   engineering to revolutionize AI-driven healthcare.
