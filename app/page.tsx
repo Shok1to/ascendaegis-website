@@ -4,9 +4,10 @@ import { Hero } from "@/components/sections/hero"
 import { Bottleneck } from "@/components/sections/bottleneck"
 import { RealTime } from "@/components/sections/real-time"
 import { IntegrationPipeline } from "@/components/sections/integration-pipeline"
-import { CTA } from "@/components/sections/cta"
-import { Partnership } from "@/components/sections/partnership"
 import { Vision } from "@/components/sections/vision"
+import { Partnership } from "@/components/sections/partnership"
+import { FAQ } from "@/components/sections/faq"
+import { CTA } from "@/components/sections/cta"
 
 export default function HomePage() {
   return (
@@ -17,9 +18,10 @@ export default function HomePage() {
         <Bottleneck />
         <RealTime />
         <IntegrationPipeline />
-        <CTA />
-        <Partnership />
         <Vision />
+        <Partnership />
+        <FAQ />
+        <CTA />
       </main>
       <SiteFooter />
     </div>

@@ -9,7 +9,7 @@ const items = [
   {
     icon: ShieldCheck,
     title: 'SOC 2 Type II',
-    desc: 'Enterprise-grade security controls via the Nuvollo cloud infrastructure.',
+    desc: 'Enterprise-grade security controls via our SOC-certified hosting partner.',
   },
   {
     icon: Lock,

@@ -5,6 +5,7 @@ const footerNav = [
   {
     heading: "Platform",
     links: [
+      { href: "/sleep-tool", label: "Sleep Tool" },
       { href: "/security-compliance", label: "Security & Compliance" },
       { href: "/clinical-validation", label: "Clinical Validation" },
     ],

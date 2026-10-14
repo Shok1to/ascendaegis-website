@@ -11,9 +11,9 @@ const geistMono = Geist_Mono({
 })
 
 export const metadata: Metadata = {
-  title: 'Ascend Aegis | Regulatory-Compliant AI for Clinical Diagnostics',
+  title: 'Ascend Aegis',
   description:
-    'Ascend Aegis builds regulatory-compliant AI for clinical automation. Starting with sleep scoring, scaling across the medical landscape.',
+    'Ascend Aegis builds generative and agentic AI for medical diagnostics, starting with sleep medicine. Edge and mesh architecture, SOC-certified hosting, Toronto.',
   generator: 'v0.app',
 }
 

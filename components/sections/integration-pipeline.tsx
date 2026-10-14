@@ -1,30 +1,32 @@
-import { Shield, Cpu, FileText, ClipboardCheck } from "lucide-react"
+import Link from "next/link"
 import { Reveal } from "@/components/parallax"
 
-const steps = [
+const fields = [
   {
-    icon: Shield,
-    step: "01",
-    title: "Secure Data Ingestion",
-    body: "Your clinic streams raw, sequential physiological data securely via our optimized S-Type API.",
+    chip: "In validation",
+    chipColor: "bg-accent text-accent-foreground",
+    title: "Sleep medicine",
+    body: "Automated scoring of overnight sleep studies, with a draft report for physician review.",
+    href: "/sleep-tool",
+    linkLabel: "About the Sleep Tool",
   },
   {
-    icon: Cpu,
-    step: "02",
-    title: "Algorithmic Analysis",
-    body: "The deep learning backend processes the signals, executing precise event detection and sleep architecture scoring according to AASM guidelines.",
+    chip: "Expertise in place",
+    chipColor: "bg-secondary text-secondary-foreground",
+    title: "Cardiology",
+    body: "The team has built models for echocardiography segmentation and ejection fraction estimation. Sleep apnea and heart disease are closely linked, which makes cardiology a natural next field.",
   },
   {
-    icon: FileText,
-    step: "03",
-    title: "Instant Report Generation",
-    body: "The system automatically calculates the Apnea-Hypopnea Index (AHI) and generates comprehensive, clinical-grade diagnostic reports.",
+    chip: "Expertise in place",
+    chipColor: "bg-secondary text-secondary-foreground",
+    title: "Radiology",
+    body: "Clinical image analysis is a core strength of the team's AI research. Image intake, analysis and a draft report for physician review follow the same pattern as the Sleep Tool.",
   },
   {
-    icon: ClipboardCheck,
-    step: "04",
-    title: "Clinical Sign-Off",
-    body: "Your staff reviews and signs off on the completed study in a fraction of the traditional time, instantly clearing your patient queue.",
+    chip: "Exploring",
+    chipColor: "bg-muted text-muted-foreground",
+    title: "Cell therapy manufacturing",
+    body: "Cell therapy production depends on many measurements, strict quality control and complete records. Automating those checks calls for the data integrity and audit-trail experience on the team.",
   },
 ]
 
@@ -33,40 +35,53 @@ export function IntegrationPipeline() {
     <section className="border-b border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow text-accent">How it works</p>
+          <p className="eyebrow text-accent">Diagnostic fields</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            The Integration Pipeline
+            From sleep medicine to other diagnostic fields
           </h2>
           <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
-            From patient data to physician report in minutes, not hours.
+            Sleep medicine is where Aegis is validating its first product.
+            The same foundations carry into other fields, and each one needs
+            its own clinical partners, data and regulatory work before a
+            product exists.
           </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {steps.map((step, i) => (
-            <Reveal key={step.title} delay={i * 120}>
-              <div className="relative flex flex-col rounded-xl border border-border bg-card p-7 h-full">
-                {i < steps.length - 1 && (
-                  <div className="absolute right-0 top-10 hidden h-px w-6 bg-border lg:block translate-x-full" />
-                )}
-                <div className="flex items-center gap-3 mb-5">
-                  <span className="font-mono text-xs font-semibold text-accent">
-                    {step.step}
-                  </span>
-                  <div className="flex h-10 w-10 items-center justify-center rounded-md bg-primary/10 text-primary">
-                    <step.icon className="h-5 w-5" aria-hidden="true" />
-                  </div>
-                </div>
-                <h3 className="text-base font-semibold text-foreground">
-                  {step.title}
-                </h3>
-                <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
-                  {step.body}
-                </p>
-              </div>
+        <div className="mt-14 grid gap-6 sm:grid-cols-2">
+          {fields.map((field, i) => (
+            <Reveal
+              key={field.title}
+              delay={i * 120}
+              className="flex flex-col rounded-xl border border-border bg-card p-7"
+            >
+              <span
+                className={`inline-flex w-fit items-center rounded-full px-2.5 py-0.5 text-xs font-medium ${field.chipColor}`}
+              >
+                {field.chip}
+              </span>
+              <h3 className="mt-4 text-lg font-semibold text-foreground">
+                {field.title}
+              </h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {field.body}
+              </p>
+              {field.href && (
+                <Link
+                  href={field.href}
+                  className="mt-4 text-sm font-medium text-accent underline-offset-4 hover:underline"
+                >
+                  {field.linkLabel} &rarr;
+                </Link>
+              )}
             </Reveal>
           ))}
         </div>
+
+        <Reveal delay={480}>
+          <p className="mt-8 text-sm text-muted-foreground">
+            Only the Aegis Sleep Tool is in clinical validation today.
+          </p>
+        </Reveal>
       </div>
     </section>
   )

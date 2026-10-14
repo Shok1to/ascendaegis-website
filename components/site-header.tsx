@@ -10,6 +10,7 @@ import { Button } from "@/components/ui/button"
 import { ShieldLogo } from "@/components/shield-logo"
 
 const primaryLinks = [
+  { href: "/sleep-tool", label: "Sleep Tool" },
   { href: "/our-solution", label: "Our Solution" },
   { href: "/clinical-validation", label: "Clinical Validation" },
   { href: "/security-compliance", label: "Security & Compliance" },

@@ -5,33 +5,32 @@ import { Reveal } from "@/components/parallax"
 
 export function CTA() {
   return (
-    <section className="border-b border-primary-foreground/10 bg-primary text-primary-foreground">
+    <section className="bg-primary text-primary-foreground">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-        <Reveal className="max-w-2xl mx-auto text-center">
-          <p className="eyebrow text-primary-foreground/70">Get started</p>
-          <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
-            Ready to remove your scoring bottleneck?
-          </h2>
-          <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
-            Connect with our engineering team to review our API documentation
-            and plan your pipeline integration.
-          </p>
-          <div className="mt-9 flex flex-col gap-3 sm:flex-row justify-center">
+        <Reveal className="grid items-center gap-10 lg:grid-cols-2">
+          <div>
+            <h2 className="text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
+              Talk to Aegis
+            </h2>
+            <p className="mt-5 max-w-xl text-pretty text-lg leading-relaxed text-primary-foreground/85">
+              Clinics, clinical partners, investors and collaborators can
+              write to us directly. For technical questions about the Sleep
+              Tool, use technical@aaegis-ai.com.
+            </p>
+          </div>
+          <div className="flex flex-col items-start gap-4 lg:items-end">
+            <span className="font-mono text-sm text-primary-foreground/80">
+              info@aaegis-ai.com
+            </span>
             <Button
               size="lg"
               className="bg-background text-foreground hover:bg-background/90"
-              render={<Link href="/for-clinics#contact" />}
+              render={
+                <Link href="mailto:info@aaegis-ai.com?subject=Enquiry%20about%20Aegis" />
+              }
             >
-              Book a Demo
+              Email info@aaegis-ai.com
               <ArrowRight className="h-4 w-4" />
-            </Button>
-            <Button
-              size="lg"
-              variant="outline"
-              className="border-primary-foreground/30 bg-transparent text-primary-foreground hover:bg-primary-foreground/10 hover:text-primary-foreground"
-              render={<Link href="/our-solution" />}
-            >
-              View API Specs
             </Button>
           </div>
         </Reveal>

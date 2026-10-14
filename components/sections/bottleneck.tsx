@@ -1,21 +1,16 @@
-import { Stethoscope, Zap, Globe2 } from 'lucide-react'
+import { Sparkles, Workflow } from 'lucide-react'
 import { Reveal } from '@/components/parallax'
 
 const pillars = [
   {
-    icon: Stethoscope,
-    title: 'Clinically Validated AI',
-    body: 'Born from a partnership with Canadian sleep clinics, Aegis was built to solve a real-world problem: manual scoring is too slow. We have automated the entire process to deliver immediate, consistent, and reliable results from patient to physician.',
+    icon: Sparkles,
+    title: 'Generative AI',
+    body: 'Writes and summarises. In diagnostics that means a draft report or a plain-language summary of a result, ready for a clinician to review and correct.',
   },
   {
-    icon: Zap,
-    title: 'Zero-Friction Diagnostics',
-    body: 'We provide the infrastructure for diagnostic automation. By eliminating manual bottlenecks and integrating enterprise-grade cloud security, we empower providers to focus on patient care while our technology handles the complexity of the data.',
-  },
-  {
-    icon: Globe2,
-    title: 'The New Global Standard',
-    body: 'Sleep is our wedge; global diagnostic automation is our goal. We are building the regulatory-compliant backbone for the next generation of medicine, evolving our AI to set a new standard across the entire medical landscape.',
+    icon: Workflow,
+    title: 'Agentic AI',
+    body: 'Carries a task through its steps. For example: check a recording for quality problems, run the analysis, and send the result to the right person for sign-off.',
   },
 ]
 
@@ -24,13 +19,17 @@ export function Bottleneck() {
     <section className="border-b border-border bg-background">
       <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
         <Reveal className="max-w-2xl">
-          <p className="eyebrow text-accent">Breaking the diagnostic bottleneck</p>
+          <p className="eyebrow text-accent">Our approach</p>
           <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight text-foreground sm:text-4xl">
-            Manual scoring is too slow. We automated the entire workflow.
+            Generative and agentic AI, with a clinician in charge
           </h2>
+          <p className="mt-5 text-pretty text-lg leading-relaxed text-muted-foreground">
+            Two kinds of AI do different jobs in a diagnostic workflow. Aegis
+            uses both, and a clinician makes the final decision.
+          </p>
         </Reveal>
 
-        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-3">
+        <div className="mt-14 grid gap-px overflow-hidden rounded-xl border border-border bg-border md:grid-cols-2">
           {pillars.map((pillar, i) => (
             <Reveal key={pillar.title} delay={i * 120} className="bg-card p-7">
               <div className="flex h-11 w-11 items-center justify-center rounded-md bg-primary/10 text-primary">
