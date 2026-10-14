@@ -18,11 +18,8 @@ const sleepToolLinks = [
 
 const primaryLinks = [
   { href: "/security-compliance", label: "Security & Compliance" },
-]
-
-const moreLinks = [
-  { href: "/investors", label: "Investors" },
   { href: "/team", label: "Team" },
+  { href: "/investors", label: "Investors" },
 ]
 
 export function SiteHeader() {
@@ -30,7 +27,6 @@ export function SiteHeader() {
   const { data: session, status } = useSession()
   const [open, setOpen] = useState(false)
   const [sleepToolOpen, setSleepToolOpen] = useState(false)
-  const [moreOpen, setMoreOpen] = useState(false)
 
   const sleepToolActive = sleepToolLinks.some(
     (link) => pathname === link.href,
@@ -106,36 +102,6 @@ export function SiteHeader() {
               </Link>
             )
           })}
-
-          {/* More dropdown */}
-          <div className="relative">
-            <button
-              onClick={() => setMoreOpen((v) => !v)}
-              className="flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium text-muted-foreground transition-colors hover:text-foreground"
-            >
-              More
-              <ChevronDown
-                className={cn(
-                  "h-4 w-4 transition-transform",
-                  moreOpen && "rotate-180",
-                )}
-              />
-            </button>
-            {moreOpen && (
-              <div className="absolute right-0 top-full mt-1 w-52 rounded-xl border border-border bg-background shadow-lg">
-                {moreLinks.map((link) => (
-                  <Link
-                    key={link.href}
-                    href={link.href}
-                    onClick={() => setMoreOpen(false)}
-                    className="block px-4 py-2.5 text-sm text-foreground/80 hover:bg-secondary hover:text-foreground first:rounded-t-xl last:rounded-b-xl"
-                  >
-                    {link.label}
-                  </Link>
-                ))}
-              </div>
-            )}
-          </div>
         </nav>
 
         <div className="hidden items-center gap-2 md:flex">
@@ -193,7 +159,7 @@ export function SiteHeader() {
                 {link.label}
               </Link>
             ))}
-            {[...primaryLinks, ...moreLinks].map((link) => (
+            {primaryLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
