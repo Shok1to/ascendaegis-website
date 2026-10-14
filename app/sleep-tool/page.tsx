@@ -13,29 +13,6 @@ export const metadata: Metadata = {
     "The Aegis Sleep Tool scores overnight sleep studies following AASM rules and prepares a draft report for physician review. In validation with Canadian sleep clinics.",
 }
 
-const steps = [
-  {
-    step: "01",
-    title: "Study received",
-    body: "The clinic sends the recording from its sleep equipment over a secured connection.",
-  },
-  {
-    step: "02",
-    title: "AI scoring",
-    body: "The tool analyses the signals and labels each 30-second segment.",
-  },
-  {
-    step: "03",
-    title: "Draft report",
-    body: "The result is assembled into a report with the sleep stages for the night and summary measures.",
-  },
-  {
-    step: "04",
-    title: "Clinician review and sign-off",
-    body: "Clinical staff check the draft, correct it where needed, and a physician signs off.",
-  },
-]
-
 const status = [
   {
     area: "Clinical validation",
@@ -150,33 +127,25 @@ export default function SleepToolPage() {
         {/* How it fits — navy */}
         <section className="border-b border-border bg-primary text-primary-foreground">
           <div className="mx-auto max-w-6xl px-4 py-20 sm:px-6 lg:px-8 lg:py-28">
-            <Reveal>
+            <Reveal className="max-w-2xl">
               <p className="eyebrow text-primary-foreground/70">How it fits</p>
               <h2 className="mt-4 text-balance text-3xl font-semibold tracking-tight sm:text-4xl">
                 From recording to signed report
               </h2>
-            </Reveal>
-            <div className="mt-12 grid gap-6 sm:grid-cols-2">
-              {steps.map((item, i) => (
-                <Reveal
-                  key={item.step}
-                  delay={i * 120}
-                  className="flex gap-5 rounded-xl border border-primary-foreground/20 bg-primary-foreground/10 p-7"
+              <p className="mt-5 text-pretty text-lg leading-relaxed text-primary-foreground/85">
+                The clinic sends a study over a secured connection, the tool
+                scores it, and clinical staff review the draft before a
+                physician signs off.
+              </p>
+              <p className="mt-6">
+                <Link
+                  href="/our-solution"
+                  className="text-sm font-medium text-primary-foreground underline-offset-4 hover:underline"
                 >
-                  <span className="font-mono text-sm font-semibold text-accent shrink-0 mt-1">
-                    {item.step}
-                  </span>
-                  <div>
-                    <h3 className="text-lg font-semibold text-primary-foreground">
-                      {item.title}
-                    </h3>
-                    <p className="mt-3 text-sm leading-relaxed text-primary-foreground/75">
-                      {item.body}
-                    </p>
-                  </div>
-                </Reveal>
-              ))}
-            </div>
+                  See the full pipeline &rarr;
+                </Link>
+              </p>
+            </Reveal>
           </div>
         </section>
 

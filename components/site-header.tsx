@@ -9,15 +9,18 @@ import { cn } from "@/lib/utils"
 import { Button } from "@/components/ui/button"
 import { ShieldLogo } from "@/components/shield-logo"
 
-const primaryLinks = [
-  { href: "/sleep-tool", label: "Sleep Tool" },
+const sleepToolLinks = [
+  { href: "/sleep-tool", label: "Sleep Tool overview" },
   { href: "/our-solution", label: "Our Solution" },
   { href: "/clinical-validation", label: "Clinical Validation" },
+  { href: "/for-clinics", label: "For Clinics" },
+]
+
+const primaryLinks = [
   { href: "/security-compliance", label: "Security & Compliance" },
 ]
 
 const moreLinks = [
-  { href: "/for-clinics", label: "For Clinics" },
   { href: "/investors", label: "Investors" },
   { href: "/team", label: "Team" },
 ]
@@ -26,7 +29,12 @@ export function SiteHeader() {
   const pathname = usePathname()
   const { data: session, status } = useSession()
   const [open, setOpen] = useState(false)
+  const [sleepToolOpen, setSleepToolOpen] = useState(false)
   const [moreOpen, setMoreOpen] = useState(false)
+
+  const sleepToolActive = sleepToolLinks.some(
+    (link) => pathname === link.href,
+  )
 
   return (
     <header className="sticky top-0 z-50 border-b border-border bg-background/90 backdrop-blur supports-[backdrop-filter]:bg-background/75">
@@ -41,6 +49,46 @@ export function SiteHeader() {
         </Link>
 
         <nav className="hidden items-center gap-1 md:flex">
+          {/* Sleep Tool dropdown */}
+          <div className="relative">
+            <button
+              onClick={() => setSleepToolOpen((v) => !v)}
+              className={cn(
+                "flex items-center gap-1 rounded-md px-3 py-2 text-sm font-medium transition-colors",
+                sleepToolActive
+                  ? "text-primary"
+                  : "text-muted-foreground hover:text-foreground",
+              )}
+            >
+              Sleep Tool
+              <ChevronDown
+                className={cn(
+                  "h-4 w-4 transition-transform",
+                  sleepToolOpen && "rotate-180",
+                )}
+              />
+            </button>
+            {sleepToolOpen && (
+              <div className="absolute left-0 top-full mt-1 w-56 rounded-xl border border-border bg-background shadow-lg">
+                {sleepToolLinks.map((link) => (
+                  <Link
+                    key={link.href}
+                    href={link.href}
+                    onClick={() => setSleepToolOpen(false)}
+                    className={cn(
+                      "block px-4 py-2.5 text-sm first:rounded-t-xl last:rounded-b-xl",
+                      pathname === link.href
+                        ? "bg-secondary text-foreground"
+                        : "text-foreground/80 hover:bg-secondary hover:text-foreground",
+                    )}
+                  >
+                    {link.label}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+
           {primaryLinks.map((link) => {
             const active = pathname === link.href
             return (
@@ -132,6 +180,19 @@ export function SiteHeader() {
       {open && (
         <div className="border-t border-border bg-background md:hidden">
           <nav className="mx-auto flex max-w-6xl flex-col gap-1 px-4 py-4 sm:px-6">
+            <p className="px-3 pt-2 pb-1 text-xs font-semibold uppercase tracking-wide text-muted-foreground">
+              Sleep Tool
+            </p>
+            {sleepToolLinks.map((link) => (
+              <Link
+                key={link.href}
+                href={link.href}
+                onClick={() => setOpen(false)}
+                className="rounded-md px-3 py-2.5 text-sm font-medium text-foreground hover:bg-secondary"
+              >
+                {link.label}
+              </Link>
+            ))}
             {[...primaryLinks, ...moreLinks].map((link) => (
               <Link
                 key={link.href}
