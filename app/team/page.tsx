@@ -24,6 +24,12 @@ const leadership = [
     bio: "A cornerstone of our clinical validation process. Dr. Glazer leads the weekly validation sessions, ensuring that every AI-driven insight meets the highest standards of sleep medicine. His oversight bridges the gap between machine learning and patient-centric care.",
     image: "/images/Stephen.webp",
   },
+  {
+    name: "Jeni dela Paz-Dantoc",
+    title: "Country Manager · Philippines",
+    bio: "Jeni drives operations and regional growth across Asia for Ascend Aegis, bringing over two decades of enterprise scaling expertise. She bridges public-private partnerships and aligns cross-functional teams, ensuring high-growth ventures scale smoothly and sustainably within competitive markets.",
+    image: "/images/Jeni-portrait.jpg",
+  },
 ]
 
 const engineering = [
@@ -156,7 +162,7 @@ export default function TeamPage() {
                 Leadership Team
               </h2>
             </Reveal>
-            <div className="mt-12 grid gap-10 sm:grid-cols-2 lg:grid-cols-3">
+            <div className="mx-auto mt-12 grid max-w-4xl gap-10 sm:grid-cols-2">
               {leadership.map((member, i) => (
                 <Reveal key={member.name} delay={i * 120}>
                   <div className="flex flex-col items-center text-center">
