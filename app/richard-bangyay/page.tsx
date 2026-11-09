@@ -30,7 +30,7 @@ export default function RichardBangyayPage() {
                 Richard Bangyay
               </h1>
               <p className="mt-3 text-lg text-primary-foreground/85">
-                Board Member | Founder and CEO, Ascend Aegis Corporation
+                Board Member | Founder · CEO, Ascend Aegis Corporation
               </p>
             </Reveal>
           </div>

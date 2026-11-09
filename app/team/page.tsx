@@ -8,7 +8,7 @@ import { Reveal } from "@/components/parallax"
 const leadership = [
   {
     name: "Richard Bangyay",
-    title: "Founder and CEO",
+    title: "Founder · CEO",
     bio: 'Focused on the intersection of AI-driven medical automation and scalable business unit economics, Richard founded Ascend Aegis and continues to shape its long-term direction, moving the company from a "Wedge" strategy in sleep diagnostics toward a global Diagnostic Operating System.',
     image: "/images/Richard.webp",
   },
