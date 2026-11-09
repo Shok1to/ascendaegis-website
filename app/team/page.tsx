@@ -8,14 +8,14 @@ import { Reveal } from "@/components/parallax"
 const leadership = [
   {
     name: "Richard Bangyay",
-    title: "Founder",
+    title: "Founder and CEO",
     bio: 'Focused on the intersection of AI-driven medical automation and scalable business unit economics, Richard founded Ascend Aegis and continues to shape its long-term direction, moving the company from a "Wedge" strategy in sleep diagnostics toward a global Diagnostic Operating System.',
     image: "/images/Richard.webp",
   },
   {
     name: "Brianna Morissette",
-    title: "President · Chief Executive Officer",
-    bio: 'Brianna leads the strategic vision at Ascend Aegis, driving operational excellence. She oversees project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
+    title: "Chief Operating Officer",
+    bio: 'As COO, Brianna runs day-to-day operations at Ascend Aegis, driving operational excellence. She oversees project lifecycles, investor relations, and partnerships, ensuring the "Diagnostic Operating System" scales with the precision and integrity required for global medical deployment.',
     image: "/images/Brianna.webp",
   },
   {

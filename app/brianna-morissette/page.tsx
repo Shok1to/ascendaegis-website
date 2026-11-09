@@ -30,8 +30,8 @@ export default function BriannaMorissettePage() {
                 Brianna Morissette
               </h1>
               <p className="mt-3 text-lg text-primary-foreground/85">
-                Board Member | President &amp; Chief Executive Officer, Ascend
-                Aegis Corporation
+                Board Member | Chief Operating Officer, Ascend Aegis
+                Corporation
               </p>
             </Reveal>
           </div>
@@ -55,13 +55,13 @@ export default function BriannaMorissettePage() {
                 <p>
                   Brianna Morissette is the{" "}
                   <strong className="text-foreground">
-                    President and Chief Executive Officer
+                    Chief Operating Officer
                   </strong>{" "}
                   of Ascend Aegis Corporation, an AI startup developing a sleep
                   diagnostic tool. She joined the company in 2025 as Chief of
-                  Staff and moved into the CEO role in 2026, where she leads
-                  fundraising, investor relations, partnerships, and day-to-day
-                  operations. The company&apos;s sleep diagnostic platform was
+                  Staff and moved into the COO role in 2026, where she oversees
+                  day-to-day operations, fundraising, investor relations, and
+                  partnerships. The company&apos;s sleep diagnostic platform was
                   built under technical co-founder Richard Bangyay.
                 </p>
 
@@ -93,13 +93,14 @@ export default function BriannaMorissettePage() {
                   <ul className="space-y-3 pl-4">
                     <li>
                       <strong className="text-foreground">
-                        President &amp; Chief Executive Officer, Ascend Aegis
+                        Chief Operating Officer, Ascend Aegis
                         Corporation (2026–Present):
                       </strong>{" "}
-                      Leads the company, with a focus on fundraising, investor
-                      relations, and partnerships. Oversees executive operations
-                      and internal and external communications. Works across
-                      teams to keep company priorities moving forward.
+                      Runs day-to-day operations alongside the CEO, with a focus
+                      on fundraising, investor relations, and partnerships.
+                      Oversees executive operations and internal and external
+                      communications. Works across teams to keep company
+                      priorities moving forward.
                     </li>
                     <li>
                       <strong className="text-foreground">
